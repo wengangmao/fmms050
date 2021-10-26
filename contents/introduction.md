@@ -1,0 +1,64 @@
+FMMS050 -- Statistical and machine learning methods for engineering mechanics
+
+Syllabus for this course 
+The course is given by the Division of Marine Technology on the Department of Mechanics and Maritime Sciences, Chalmers University of Technology in Gothenburg, Sweden. 
+
+Course credit: 7,5 Credits
+Grading: Pass, Fail
+Education cycle: Doctoral student
+Major subject: Shipping and Marine Technology, Applied Mechanics
+Department: 30 - MECHANICS AND MARITIME SCIENCES
+
+Teaching language: English
+
+Examiner and Lecturer: Wengang Mao 
+Phone: 031–7721483; Email: Wengang.Mao@chalmers.se
+
+Eligibility
+Doctoral students and senior master students at Chalmers
+
+Course specific prerequisites
+Mathematics (including mathematical statistics, linear algebra, numerical analysis and multi-variable calculus), mechanics and strength of materials and engineering materials. Applicants should have the need to deal with some experimental or full-scale data from engineering mechanics.
+
+Aim and objectives
+The purpose of the course is to give statistical and machine learning methods to deal with experimental and full-scale test data from engineering mechanics, in order to understand the hidden characteristics within the data. In this course, the so-called data will cover two types, i.e., independent observations from multi-variables with uncertainties/noises, and strongly dependent observations of time series signals. In addition to the direct implementation skills of these methods for practical applications, this course also aims at teaching some fundamental theory connected to each method.  
+Learning outcomes 
+After finishing the course, the student will have professional knowledge in the interpretation of various random nature involved engineering problems and application of various statistical and machine learning methods to model and explain engineering scenarios containing uncertainties.
+
+Course contents
+The course is divided into four parts: basis of machine learning applications, statistical learning methods, machine learning methods and time series forecasting. Some more details of each part are given as below. 
+•	Basis of machine learning applications:
+o	Clarification of different terminologies within field of AI and ML
+o	Overview of different machine learning categories
+o	Basic mathematics and statistics for application of ML
+•	Statistical learning methods
+o	Regression and its interpretation
+o	Gradient for regression (parameter estimations) 
+o	Polynomial and Spline fitting
+o	Generalized linear regression
+o	Generalized additive model and mixed effect model
+•	Machine learning methods
+o	Logistical regression and classification
+o	Neural network
+o	Support vector machine
+o	Decision trees and ensemble algorithm
+o	Boosting method (XGBoost)
+•	Machine learning methods
+o	Gaussian transformation method
+o	Basic properties of stationary Gaussian process
+o	Autocorrelation and Conditional expectation
+o	Auto regressive models and Moving average models
+o	ARIMA models
+o	Examples of applications
+The course will contain some assignments and seminars related to different methods.
+Organization
+Teaching is in the form of lectures, assignments and seminars. The course contains 18 lectures, each will last for 2-4 hours. In the end of the course, there will have two lectures where students will need to present their assignments.
+
+Literature
+Hastie T., Ribshirani R. and Friedman J. (2003). The elements of statistical learning, Data mining, inference and prediction. Springer.
+Shalizi, C.R. (2019). Advanced data analysis from an Elementary point of view. Pre-print.
+Shumway, R.H. and Stoffer, D.S. (2016). Time series analysis and its applications with R examples, Fourth edition. Springer.
+Wei, W.W.S. (2006). Time series analysis Univariate and multivariate models, Second edition. Pearson Addison Wesley.
+
+Examination including compulsory elements
+The examination of the course consists of assignments and a final seminar.
