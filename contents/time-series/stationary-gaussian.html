@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; ML for engineering mechanics</title>
+    <title>Basic properties of stationary Gaussian process &#8212; ML for engineering mechanics</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,6 +53,8 @@
     <link rel="shortcut icon" href="../../_static/learning.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Autocorrelation and Conditional expectation" href="acf.html" />
+    <link rel="prev" title="Gaussian transformation method" href="gaussian-transform.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -162,7 +164,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../regression/interperations.html">
-   Regression and its interpretation
+   Regression and interpretation
   </a>
  </li>
  <li class="toctree-l1">
@@ -208,6 +210,104 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../regression/gam-mem.html">
+   Generalized additive and mixed dffect models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../regression/gam-mem_tutorial.html">
+     Tutorial for GAM and MEM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../regression/gam-mem_codes.html">
+     Example codes for GAM and MEM
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MACHINE LEARNING METHODS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../machine-learning/logistic.html">
+   Logistical regression and classification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../machine-learning/ann.html">
+   Artificial neural network
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../machine-learning/svm.html">
+   Support vector machine
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../machine-learning/trees.html">
+   Decision trees and ensemble algorithm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../machine-learning/boost.html">
+   Boosting methods (XGBoost)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  TIME SERIES LEARNING METHODS
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="gaussian-transform.html">
+   Gaussian transformation methods
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Basic properties of stationary Gaussian process
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="acf.html">
+   Autocorrelation and Conditional expectation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ar-ma.html">
+   Auto regressive models and Moving average models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="arima.html">
+   ARIMA models
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  DEEP LEARNING AND SPATIO-TEMPORAL MODELLING
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../deep-learning/cnn.html">
+   Convolutional neural network
+  </a>
  </li>
 </ul>
 
@@ -293,14 +393,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -309,7 +401,11 @@
         
               <div>
                 
-  
+  <div class="section" id="basic-properties-of-stationary-gaussian-process">
+<h1>Basic properties of stationary Gaussian process<a class="headerlink" href="#basic-properties-of-stationary-gaussian-process" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -339,6 +435,24 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="gaussian-transform.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Gaussian transformation method</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="acf.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Autocorrelation and Conditional expectation</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
