@@ -29,7 +29,7 @@ parts:
 - caption: STATISTICAL REGRESSION
   chapters:
   - file: contents/regression/interperations.md
-    title: Regression and its interpretation    
+    title: Regression and interpretation    
   - file: contents/regression/reg-gradient.md
     title: Gradient for regression (parameter estimations)
   - file: contents/regression/poly-spline.md
@@ -46,4 +46,11 @@ parts:
       title: Tutorial for generalized linear regression
     - file: contents/regression/glr_codes.ipynb
       title: Example codes for generalized linear regression
+  - file: contents/regression/gam-mem.md
+    title: Generalized additive and mixed dffect models
+    sections:
+    - file: contents/regression/gam-mem_tutorial.md
+      title: Tutorial for GAM and MEM
+    - file: contents/regression/gam-mem_codes.ipynb
+      title: Example codes for GAM and MEM
       

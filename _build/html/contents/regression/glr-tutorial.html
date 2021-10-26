@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; FMMS050 - ML for engineering mechanics</title>
+    <title>Tutorials of using the GLA methods &#8212; ML for engineering mechanics</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -78,7 +78,7 @@
       <img src="../../_static/learning.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">FMMS050 - ML for engineering mechanics</h1>
+      <h1 class="site-logo" id="site-title">ML for engineering mechanics</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -89,7 +89,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction.html">
-   FMMS050 – Statistical and machine learning methods for engineering mechanics
+   FMMS050 - Statistical regression and machine learning
   </a>
  </li>
 </ul>
@@ -149,6 +149,62 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../data-filter/kalmar_codes.html">
      Example codes for Kalmar filter methods
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  STATISTICAL REGRESSION
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="interperations.html">
+   Regression and its interpretation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reg-gradient.html">
+   Gradient for regression (parameter estimations)
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="poly-spline.html">
+   Polynominal and spline fitting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="poly-spline_tutorial.html">
+     Tutorial for polynominal/spline fitting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="poly-spline_codes.html">
+     Example codes for polynominal/spline fitting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="glr.html">
+   Generalized linear regression
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="glr_codes.html">
+     Example codes for generalized linear regression
     </a>
    </li>
   </ul>
@@ -237,14 +293,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -253,7 +301,11 @@
         
               <div>
                 
-  
+  <div class="section" id="tutorials-of-using-the-gla-methods">
+<h1>Tutorials of using the GLA methods<a class="headerlink" href="#tutorials-of-using-the-gla-methods" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
