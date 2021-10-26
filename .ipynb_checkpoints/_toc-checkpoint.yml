@@ -54,3 +54,39 @@ parts:
     - file: contents/regression/gam-mem_codes.ipynb
       title: Example codes for GAM and MEM
       
+- caption: MACHINE LEARNING METHODS
+  chapters:
+  - file: contents/machine-learning/logistic.md
+    title: Logistical regression and classification
+  - file: contents/machine-learning/ann.md
+    title: Artificial neural network
+  - file: contents/machine-learning/svm.md
+    title: Support vector machine
+  - file: contents/machine-learning/trees.md
+    title: Decision trees and ensemble algorithm
+  - file: contents/machine-learning/boost.md
+    title: Boosting methods (XGBoost)
+    
+- caption: TIME SERIES LEARNING METHODS
+  chapters:
+  - file: contents/time-series/gaussian-transform.md
+    title: Gaussian transformation methods
+  - file: contents/time-series/stationary-gaussian.md
+    title: Basic properties of stationary Gaussian process
+  - file: contents/time-series/acf.md
+    title: Autocorrelation and Conditional expectation
+  - file: contents/time-series/ar-ma.md
+    title: Auto regressive models and Moving average models
+  - file: contents/time-series/arima.md
+    title: ARIMA models
+
+- caption: DEEP LEARNING AND SPATIO-TEMPORAL MODELLING
+  chapters:
+  - file: contents/deep-learning/cnn.md
+    title: Convolutional neural network
+  - file: contents/deep-learning/rnn.md
+    title: Recursive neural networks - LSTM
+  - file: contents/deep-learning/spatio-temporal.md
+    title: Spatio-temporal modelling
+  - file: contents/deep-learning/spde.md
+    title: Statistical paritical differential equations
