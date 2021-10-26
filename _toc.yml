@@ -10,3 +10,40 @@ parts:
     title: Types of machine learning methods
   - file:  contents/ml-engineering/basic-math.md
     title: Basic mathematics for machine learning
+
+
+- caption: DATA FILTERING METHODS
+  chapters:
+  - file: contents/data-filter/fft.md
+    title: Fast Fourier Transform
+  - file: contents/data-filter/moving-average.md
+    title: Moving Average Methods
+  - file: contents/data-filter/kalmar.md
+    title: Kalmar filtering
+    sections:
+     - file: contents/data-filter/kalmar_tutorial.md
+       title: Tutorial of Kalmar filter methods    
+     - file: contents/data-filter/kalmar_codes.ipynb
+       title: Example codes for Kalmar filter methods
+
+- caption: STATISTICAL REGRESSION
+  chapters:
+  - file: contents/regression/interperations.md
+    title: Regression and its interpretation    
+  - file: contents/regression/reg-gradient.md
+    title: Gradient for regression (parameter estimations)
+  - file: contents/regression/poly-spline.md
+    title: Polynominal and spline fitting   
+    sections:
+    - file: contents/regression/poly-spline_tutorial.md
+      title: Tutorial for polynominal/spline fitting
+    - file: contents/regression/poly-spline_codes.ipynb
+      title: Example codes for polynominal/spline fitting
+  - file: contents/regression/glr.md
+    title: Generalized linear regression
+    sections:
+    - file: contents/regression/glr_tutorial.md
+      title: Tutorial for generalized linear regression
+    - file: contents/regression/glr_codes.ipynb
+      title: Example codes for generalized linear regression
+      

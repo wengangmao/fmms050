@@ -1,4 +1,4 @@
-# FMMS050 -- Statistical and machine learning methods for engineering mechanics
+# FMMS050 - Statistical regression and machine learning
 
 ## Syllabus for this course 
 The course is given by the Division of Marine Technology on the Department of Mechanics and Maritime Sciences, Chalmers University of Technology in Gothenburg, Sweden. 

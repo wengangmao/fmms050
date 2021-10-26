@@ -4,7 +4,7 @@
  
 #######################################################################################
 # Book settings
-title                       : FMMS050 - Statistical regression and machine learning for engineering mechanics  # The title of the book. Will be placed in the left navbar.
+title                       : ML for engineering mechanics  # The title of the book. Will be placed in the left navbar.
 author                      : Wengang Mao  # The author of the book
 copyright                   : "2021-2022"  # Copyright year to be placed in the footer
 logo                        : "contents/images/learning.png"  # A path to the book logo
