@@ -82,8 +82,8 @@ alt: large funding agencies supporting our research
 ---
 ```
 
-<object data="images/Lecture 1 - Course contents.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="images/Lecture 1 - Course contents.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="images/Lecture 1 - Course contents.pdf">Download PDF</a>.</p>
+<object data="https://github.com/wengangmao/fmms050/blob/main/contents/images/Lecture%201%20-%20Course%20contents.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/wengangmao/fmms050/blob/main/contents/images/Lecture%201%20-%20Course%20contents.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/wengangmao/fmms050/blob/main/contents/images/Lecture%201%20-%20Course%20contents.pdf">Download PDF</a>.</p>
     </embed>
 </object>
