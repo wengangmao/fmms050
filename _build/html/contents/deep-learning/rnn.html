@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; ML for engineering mechanics</title>
+    <title>Recursive neural networks &#8212; ML for engineering mechanics</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
     <link rel="shortcut icon" href="../../_static/learning.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="spatio-temporal.html" />
+    <link rel="next" title="Spatio-temporal model" href="spatio-temporal.html" />
     <link rel="prev" title="Convolutional neural network" href="cnn.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -268,13 +268,60 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  DEEP LEARNING AND SPATIO-TEMPORAL MODELLING
+  TIME SERIES LEARNING METHODS
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../time-series/gaussian-transform.html">
+   Gaussian transformation methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../time-series/stationary-gaussian.html">
+   Basic properties of stationary Gaussian process
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../time-series/acf.html">
+   Autocorrelation and Conditional expectation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../time-series/ar-ma.html">
+   Auto regressive models and Moving average models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../time-series/arima.html">
+   ARIMA models
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  DEEP LEARNING AND SPATIO-TEMPORAL MODELLING
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="cnn.html">
    Convolutional neural network
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Recursive neural networks - LSTM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spatio-temporal.html">
+   Spatio-temporal modelling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spde.html">
+   Statistical paritical differential equations
   </a>
  </li>
 </ul>
@@ -361,14 +408,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -377,7 +416,12 @@
         
               <div>
                 
-  
+  <div class="section" id="recursive-neural-networks">
+<h1>Recursive neural networks<a class="headerlink" href="#recursive-neural-networks" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>This is good for the time series prediction. It has evoluted several further development and can be combined with typical machine learning analysis to extract the static conditions. We will introduce several RNN based methods.</p>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -420,7 +464,7 @@
         <a class="right-next" href="spatio-temporal.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">&lt;no title&gt;</p>
+                <p class="prevnext-title">Spatio-temporal model</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

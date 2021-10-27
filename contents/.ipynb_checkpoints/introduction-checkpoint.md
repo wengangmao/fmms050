@@ -60,10 +60,30 @@ The course will contain some assignments and seminars related to different metho
 Teaching is in the form of lectures, assignments and seminars. The course contains 18 lectures, each will last for 2-4 hours. In the end of the course, there will have two lectures where students will need to present their assignments.
 
 ## Literature
-Hastie T., Ribshirani R. and Friedman J. (2003). The elements of statistical learning, Data mining, inference and prediction. Springer.
-Shalizi, C.R. (2019). Advanced data analysis from an Elementary point of view. Pre-print.
-Shumway, R.H. and Stoffer, D.S. (2016). Time series analysis and its applications with R examples, Fourth edition. Springer.
+Hastie T., Ribshirani R. and Friedman J. (2003). The elements of statistical learning, Data mining, inference and prediction. Springer. <br />
+
+Shalizi, C.R. (2019). Advanced data analysis from an Elementary point of view. Pre-print. <br />
+
+Shumway, R.H. and Stoffer, D.S. (2016). Time series analysis and its applications with R examples, Fourth edition. Springer.<br />
+
 Wei, W.W.S. (2006). Time series analysis Univariate and multivariate models, Second edition. Pearson Addison Wesley.
 
 ## Examination including compulsory elements
 The examination of the course consists of assignments and a final seminar.
+
+
+## Presentation -- Lecture 1
+
+```{figure} ./images/Lecture 1 - Course contents.pdf 
+---
+height: 200px
+name: funding agencies
+alt: large funding agencies supporting our research
+---
+```
+
+<object data="images/Lecture 1 - Course contents.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="images/Lecture 1 - Course contents.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="images/Lecture 1 - Course contents.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
