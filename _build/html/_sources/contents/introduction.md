@@ -74,7 +74,9 @@ The examination of the course consists of assignments and a final seminar.
 
 ## Presentation -- Lecture 1
 
-```{figure} ./images/Lecture 1 - Course contents.pdf 
+<!-- 
+
+```{figure} https://github.com/wengangmao/fmms050/blob/main/contents/images/Lecture%201%20-%20Course%20contents.pdf
 ---
 height: 200px
 name: funding agencies
@@ -82,8 +84,18 @@ alt: large funding agencies supporting our research
 ---
 ```
 
-<object data="images/Lecture 1 - Course contents.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="images/Lecture 1 - Course contents.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="images/Lecture 1 - Course contents.pdf">Download PDF</a>.</p>
+<object data="/images/lecture1-contents.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="/images/lecture1-contents.pdf">
     </embed>
 </object>
+
+
+-->
+
+
+<html>
+  <body>
+    <iframe src="/images/lecture1-contents.pdf#toolbar=0" width="100%" height="500px">
+    </iframe>
+  </body>
+</html>
