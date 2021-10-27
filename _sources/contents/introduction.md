@@ -82,17 +82,13 @@ alt: large funding agencies supporting our research
 ---
 ```
 
-<object data="https://chalmersuniversity.box.com/s/8u7tsakvh90q4s4z8lmin6he1y34bfnp" type="application/pdf" width="700px" height="700px">
-    <embed src="https://chalmersuniversity.box.com/s/8u7tsakvh90q4s4z8lmin6he1y34bfnp">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://chalmersuniversity.box.com/s/8u7tsakvh90q4s4z8lmin6he1y34bfnp">Download PDF</a>.</p>
+<object data="/images/lecture1-contents.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="/images/lecture1-contents.pdf">
     </embed>
 </object>
 
-<!DOCTYPE html>
+
 <html>
-  <head>
-    <title>Title of the document</title>
-  </head>
   <body>
     <h1>How to disable downloading of the PDF document</h1>
     <iframe src="/images/lecture1-contents.pdf" width="100%" height="500px">
