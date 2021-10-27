@@ -83,4 +83,4 @@ alt: large funding agencies supporting our research
 ---
 ```
 
-<embed src="./images/Lecture 1 - Course contents.pdf" type="application/pdf">
+<embed src="images/Lecture 1 - Course contents.pdf" type="application/pdf">
