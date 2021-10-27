@@ -82,8 +82,6 @@ alt: large funding agencies supporting our research
 ---
 ```
 
-<embed src="images/Lecture 1 - Course contents.pdf" type="application/pdf">
-
 <object data="images/Lecture 1 - Course contents.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="images/Lecture 1 - Course contents.pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="images/Lecture 1 - Course contents.pdf">Download PDF</a>.</p>
