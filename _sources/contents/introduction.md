@@ -95,7 +95,6 @@ alt: large funding agencies supporting our research
 
 <html>
   <body>
-    <h1>I would like to show the pdf file here!</h1>
     <iframe src="/images/lecture1-contents.pdf#toolbar=0" width="100%" height="500px">
     </iframe>
   </body>
