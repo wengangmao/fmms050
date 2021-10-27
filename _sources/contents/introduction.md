@@ -74,7 +74,7 @@ The examination of the course consists of assignments and a final seminar.
 
 ## Presentation -- Lecture 1
 
-```{figure} ./images/Lecture 1 - Course contents.pdf 
+```{figure} https://github.com/wengangmao/fmms050/blob/main/contents/images/Lecture%201%20-%20Course%20contents.pdf
 ---
 height: 200px
 name: funding agencies
