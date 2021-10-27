@@ -73,7 +73,7 @@ The examination of the course consists of assignments and a final seminar.
 
 
 ## Presentation -- Lecture 1
-![Image Title](Lecture 1 - Course contents.pdf){width=85%}
+![Image Title](images/Lecture 1 - Course contents.pdf){width=85%}
 
 ```{figure} Lecture 1 - Course contents.pdf 
 ---
