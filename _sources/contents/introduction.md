@@ -74,6 +74,8 @@ The examination of the course consists of assignments and a final seminar.
 
 ## Presentation -- Lecture 1
 
+<!-- 
+
 ```{figure} https://github.com/wengangmao/fmms050/blob/main/contents/images/Lecture%201%20-%20Course%20contents.pdf
 ---
 height: 200px
@@ -86,6 +88,9 @@ alt: large funding agencies supporting our research
     <embed src="/images/lecture1-contents.pdf">
     </embed>
 </object>
+
+
+-->
 
 
 <html>
