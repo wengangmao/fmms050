@@ -82,8 +82,8 @@ alt: large funding agencies supporting our research
 ---
 ```
 
-<object data="https://github.com/wengangmao/fmms050/blob/main/contents/images/Lecture%201%20-%20Course%20contents.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/wengangmao/fmms050/blob/main/contents/images/Lecture%201%20-%20Course%20contents.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/wengangmao/fmms050/blob/main/contents/images/Lecture%201%20-%20Course%20contents.pdf">Download PDF</a>.</p>
+<object data="https://chalmersuniversity.box.com/s/8u7tsakvh90q4s4z8lmin6he1y34bfnp" type="application/pdf" width="700px" height="700px">
+    <embed src="https://chalmersuniversity.box.com/s/8u7tsakvh90q4s4z8lmin6he1y34bfnp">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://chalmersuniversity.box.com/s/8u7tsakvh90q4s4z8lmin6he1y34bfnp">Download PDF</a>.</p>
     </embed>
 </object>
