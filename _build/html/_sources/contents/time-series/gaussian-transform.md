@@ -1,4 +1,0 @@
-# Gaussian transformation method
-
-+++
----
