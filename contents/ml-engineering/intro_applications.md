@@ -1,4 +1,4 @@
-# Basic definitions of machine learning
+# Lecture 1 -- Basic definitions of machine learning
 
 +++
 ---
