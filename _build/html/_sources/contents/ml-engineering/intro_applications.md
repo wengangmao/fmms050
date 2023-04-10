@@ -12,7 +12,7 @@ In this section, we will describe some basic terminologies of machine learning m
 Please download the lecture through [Lecture 1: course contents](./lectures/Lecture 1 - Course contents.pdf). 
 
 
-```{figure} contents/images/lecture1.png
+```{figure} ./lectures/lecture1.png
 ---
 height: 500px
 name: lecture1
