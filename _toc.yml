@@ -87,6 +87,12 @@ parts:
   - file: contents/time-series/arima.md
     title: ARIMA models
 
+- caption: PROJECT ASSIGNMENT
+  chapters:
+  - file: contents/assignment/project1.md
+    title: Project 1 -- Simple regression for roll damping
+
+
 #- caption: DEEP LEARNING AND SPATIO-TEMPORAL MODELLING
 #  chapters:
 #  - file: contents/deep-learning/cnn.md
@@ -98,7 +104,4 @@ parts:
 #  - file: contents/deep-learning/spde.md
 #    title: Statistical paritical differential equations
 
-- caption: PROJECT ASSIGNMENT
-  chapters:
-  - file: contents/assignments/project1.md
-    title: Project 1 -- Simple regression for roll damping
+
