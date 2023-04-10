@@ -23,7 +23,6 @@ Phone: 031–7721483; Email: Wengang.Mao@chalmers.se
 
 ## Eligibility
 Doctoral students and senior master students at Chalmers
-
 ## Course specific prerequisites
 Mathematics (including mathematical statistics, linear algebra, numerical analysis and multi-variable calculus), mechanics and strength of materials and engineering materials. Applicants should have the need to deal with some experimental or full-scale data from engineering mechanics.
 
