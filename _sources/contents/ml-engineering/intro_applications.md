@@ -20,4 +20,4 @@ name: lecture1
 ```
 <center><span style = "color: red; font-weight: 500;  font-size: 30px">Chalmers FMMS050: Lecture 1</span></center>  <br />
 
-<center><span style = "color: red; font-weight: 500;  font-size: 30px"> Please download the lecture through [Lecture 1: course contents](https://github.com/wengangmao/fmms050/blob/main/contents/ml-engineering/lectures/Lecture%201%20-%20Course%20contents.pdf). </span></center>  <br />
+<center><span style = "color: blue; font-weight: 500;  font-size: 30px"> Please download the lecture through the following link. </span></center>  <br /> [Lecture 1: course contents](https://github.com/wengangmao/fmms050/blob/main/contents/ml-engineering/lectures/Lecture%201%20-%20Course%20contents.pdf)
