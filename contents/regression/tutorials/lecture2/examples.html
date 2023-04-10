@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>An example for Linear regression analysis &#8212; ML for engineering mechanics</title>
+    <title>Lecture 2 Example – Linear regression analysis &#8212; ML for engineering mechanics</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../../_static/learning.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="This is the 2D regression for the exercise after the class" href="excercise.html" />
+    <link rel="next" title="Lecture 2 Excercise – 2D regression exercise after the class" href="excercise.html" />
     <link rel="prev" title="Regression and its interpretation" href="../../interperations.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -167,9 +167,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">STATISTICAL REGRESSION</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../interperations.html">Regression and interpretation</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>An example for Linear regression analysis</strong></a></li>
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 2 -- Regression Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="excercise.html">Lecture 2 -- Regression Excercises</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reg-gradient.html">Gradient for regression (parameter estimations)</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../poly-spline.html">Polynominal and spline fitting</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -433,7 +431,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>An example for Linear regression analysis</h1>
+    <h1>Lecture 2 Example – Linear regression analysis</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -443,16 +441,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>An example for Linear regression analysis</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-simple-linear-regression"><strong>Part I</strong>: Simple linear regression</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-some-basic-python-ml-libraries">1, Load some basic python/ML libraries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-data-and-plot-them">2, load the data and plot them</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-the-linear-regression-analysis">3, Do the linear regression analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-simple-linear-regression"><strong>Part I</strong>: Simple linear regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-some-basic-python-ml-libraries">1, Load some basic python/ML libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-data-and-plot-them">2, load the data and plot them</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-the-linear-regression-analysis">3, Do the linear regression analysis</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-here-we-can-demonstrate-if-a-fitting-regression-is-under-over-fitted"><strong>Part II</strong>: Here we can demonstrate if a fitting/regression is under/over-fitted</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-here-we-can-demonstrate-if-a-fitting-regression-is-under-over-fitted"><strong>Part II</strong>: Here we can demonstrate if a fitting/regression is under/over-fitted</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -463,19 +459,18 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="an-example-for-linear-regression-analysis">
-<h1><strong>An example for Linear regression analysis</strong><a class="headerlink" href="#an-example-for-linear-regression-analysis" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-2-example-linear-regression-analysis">
+<h1><strong>Lecture 2 Example – Linear regression analysis</strong><a class="headerlink" href="#lecture-2-example-linear-regression-analysis" title="Permalink to this heading">#</a></h1>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>The data will be provided on the course website/cloud drive</strong></p></li>
 <li><p><strong>You can redo the example together with another similar exercise after the class</strong></p></li>
 </ul>
 </div></blockquote>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="part-i-simple-linear-regression">
-<h1><strong>Part I</strong>: Simple linear regression<a class="headerlink" href="#part-i-simple-linear-regression" title="Permalink to this heading">#</a></h1>
+<section id="part-i-simple-linear-regression">
+<h2><strong>Part I</strong>: Simple linear regression<a class="headerlink" href="#part-i-simple-linear-regression" title="Permalink to this heading">#</a></h2>
 <section id="load-some-basic-python-ml-libraries">
-<h2>1, Load some basic python/ML libraries<a class="headerlink" href="#load-some-basic-python-ml-libraries" title="Permalink to this heading">#</a></h2>
+<h3>1, Load some basic python/ML libraries<a class="headerlink" href="#load-some-basic-python-ml-libraries" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
@@ -491,7 +486,7 @@ document.write(`
 </div>
 </section>
 <section id="load-the-data-and-plot-them">
-<h2>2, load the data and plot them<a class="headerlink" href="#load-the-data-and-plot-them" title="Permalink to this heading">#</a></h2>
+<h3>2, load the data and plot them<a class="headerlink" href="#load-the-data-and-plot-them" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load the data</span>
@@ -519,7 +514,7 @@ document.write(`
 </div>
 </section>
 <section id="do-the-linear-regression-analysis">
-<h2>3, Do the linear regression analysis<a class="headerlink" href="#do-the-linear-regression-analysis" title="Permalink to this heading">#</a></h2>
+<h3>3, Do the linear regression analysis<a class="headerlink" href="#do-the-linear-regression-analysis" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>3.1, apply the equations we learned to calculate a and b</p></li>
@@ -587,8 +582,8 @@ document.write(`
 </div>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="part-ii-here-we-can-demonstrate-if-a-fitting-regression-is-under-over-fitted">
-<h1><strong>Part II</strong>: Here we can demonstrate if a fitting/regression is under/over-fitted<a class="headerlink" href="#part-ii-here-we-can-demonstrate-if-a-fitting-regression-is-under-over-fitted" title="Permalink to this heading">#</a></h1>
+<section id="part-ii-here-we-can-demonstrate-if-a-fitting-regression-is-under-over-fitted">
+<h2><strong>Part II</strong>: Here we can demonstrate if a fitting/regression is under/over-fitted<a class="headerlink" href="#part-ii-here-we-can-demonstrate-if-a-fitting-regression-is-under-over-fitted" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># notes for this course can be found at:</span>
@@ -712,6 +707,7 @@ document.write(`
 </div>
 </div>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -758,7 +754,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>This is  the 2D regression for the exercise after the class</strong></p>
+        <p class="prev-next-title"><strong>Lecture 2 Excercise – 2D regression exercise after the class</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -780,16 +776,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>An example for Linear regression analysis</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-simple-linear-regression"><strong>Part I</strong>: Simple linear regression</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-some-basic-python-ml-libraries">1, Load some basic python/ML libraries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-data-and-plot-them">2, load the data and plot them</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-the-linear-regression-analysis">3, Do the linear regression analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-simple-linear-regression"><strong>Part I</strong>: Simple linear regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-some-basic-python-ml-libraries">1, Load some basic python/ML libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-data-and-plot-them">2, load the data and plot them</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-the-linear-regression-analysis">3, Do the linear regression analysis</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-here-we-can-demonstrate-if-a-fitting-regression-is-under-over-fitted"><strong>Part II</strong>: Here we can demonstrate if a fitting/regression is under/over-fitted</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-here-we-can-demonstrate-if-a-fitting-regression-is-under-over-fitted"><strong>Part II</strong>: Here we can demonstrate if a fitting/regression is under/over-fitted</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
