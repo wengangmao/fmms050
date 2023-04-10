@@ -1,0 +1,21 @@
+# Basic definitions of machine learning
+
++++
+---
+
+In this section, we will describe some basic terminologies of machine learning methods. Especially, we will talk about the difference between terminologies, AI, ML, big data, data scientists, which are often confusing used in the society.
+
+<!---
+<center><span style = "background: green; color: yellow; font-weight: 1000; font-size: 30px; align: center"> "Save the Earth, not to find the next ..." </span></center>
+--->
+
+Please download the lecture through [Lecture 1: course contents](./lectures/Lecture 1 - Course contents.pdf). 
+
+
+```{figure} ./images/lecture1.png
+---
+height: 500px
+name: lecture1
+---
+```
+<center><span style = "color: red; font-weight: 500;  font-size: 30px">A demo for the voyage optimization developed by us!</span></center>  <br />
