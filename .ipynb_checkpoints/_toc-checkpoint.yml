@@ -2,7 +2,7 @@ format: jb-book
 root: contents/introduction
 
 parts:
-- caption: MACHINE LEARNING FOR ENGINEERING APPLICATIONS
+- caption: PART 1 -- MACHINE LEARNING FOR ENGINEERING APPLICATIONS
   chapters:
   - file:  contents/ml-engineering/intro_applications.md
     title: AI/ML terminologies
@@ -26,7 +26,7 @@ parts:
 #     - file: contents/data-filter/kalmar_codes.ipynb
 #       title: Example codes for Kalmar filter methods
 
-- caption: STATISTICAL REGRESSION
+- caption: PART 2 -- STATISTICAL REGRESSION
   chapters:
   - file: contents/regression/interperations.md
     title: Lecture 2 -- Regression and interpretation
@@ -61,7 +61,7 @@ parts:
     - file: contents/regression/gam-mem_codes.ipynb
       title: Example codes for GAM and MEM
       
-- caption: MACHINE LEARNING METHODS
+- caption: PART 3 -- MACHINE LEARNING METHODS
   chapters:
   - file: contents/machine-learning/logistic.md
     title: Logistical regression and classification
@@ -74,7 +74,7 @@ parts:
   - file: contents/machine-learning/boost.md
     title: Boosting methods (XGBoost)
     
-- caption: TIME SERIES LEARNING METHODS
+- caption: PART 4 -- TIME SERIES LEARNING METHODS
   chapters:
   - file: contents/time-series/gaussian-transform.md
     title: Gaussian transformation methods
@@ -97,3 +97,8 @@ parts:
 #    title: Spatio-temporal modelling
 #  - file: contents/deep-learning/spde.md
 #    title: Statistical paritical differential equations
+
+- caption: PROJECT ASSIGNMENT
+  chapters:
+  - file: contents/assignments/project1.md
+    title: Project 1 -- Simple regression for roll damping
