@@ -29,7 +29,14 @@ parts:
 - caption: STATISTICAL REGRESSION
   chapters:
   - file: contents/regression/interperations.md
-    title: Regression and interpretation    
+    title: Regression and interpretation
+  - file: contents/regression/tutorials/lecture2/examples.ipynb
+    title: Lecture 2 -- Regression Examples
+  - file: contents/regression/tutorials/lecture2/excercise.ipynb
+    title: Lecture 2 -- Regression Excercises
+    
+    
+    
   - file: contents/regression/reg-gradient.md
     title: Gradient for regression (parameter estimations)
   - file: contents/regression/poly-spline.md
