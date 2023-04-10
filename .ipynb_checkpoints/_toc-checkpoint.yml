@@ -87,13 +87,13 @@ parts:
   - file: contents/time-series/arima.md
     title: ARIMA models
 
-- caption: DEEP LEARNING AND SPATIO-TEMPORAL MODELLING
-  chapters:
-  - file: contents/deep-learning/cnn.md
-    title: Convolutional neural network
-  - file: contents/deep-learning/rnn.md
-    title: Recursive neural networks - LSTM
-  - file: contents/deep-learning/spatio-temporal.md
-    title: Spatio-temporal modelling
-  - file: contents/deep-learning/spde.md
-    title: Statistical paritical differential equations
+#- caption: DEEP LEARNING AND SPATIO-TEMPORAL MODELLING
+#  chapters:
+#  - file: contents/deep-learning/cnn.md
+#    title: Convolutional neural network
+#  - file: contents/deep-learning/rnn.md
+#    title: Recursive neural networks - LSTM
+#  - file: contents/deep-learning/spatio-temporal.md
+#    title: Spatio-temporal modelling
+#  - file: contents/deep-learning/spde.md
+#    title: Statistical paritical differential equations
