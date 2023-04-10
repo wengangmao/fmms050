@@ -5,7 +5,7 @@ parts:
 - caption: PART 1 -- MACHINE LEARNING FOR ENGINEERING APPLICATIONS
   chapters:
   - file:  contents/ml-engineering/intro_applications.md
-    title: AI/ML terminologies
+    title: Lecture 1 -- AI/ML terminologies
   - file:  contents/ml-engineering/ml-types.md
     title: Types of machine learning methods
   - file:  contents/ml-engineering/basic-math.md

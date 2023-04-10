@@ -1,5 +1,6 @@
-\section*{Project 1: Roll decay damping}
-\label{project1}
+# Project 1: Roll decay damping
++++
+---
 
 A parameters identification technique (PIT) is often used to obtain the damping coefficients from the roll decay tests. In this technique, parameters in a mathematical
 model are determined in order to get the best fit to a roll decay time
@@ -98,5 +99,4 @@ model used, the steady roll angle was instead removed by removing the
 linear trend in the roll angle signal.
 
 
-{\color{blue}NB:You can download data from ``https://data.mendeley.com/datasets/2stvkyngj9/2", or ``https://chalmersuniversity.box.com/s/wsnew9tz6bj9yzbs86i967p6l93im6zm".
-}
+NB:You can download [data-location1](https://data.mendeley.com/datasets/2stvkyngj9/2),[data-location2](https://chalmersuniversity.box.com/s/wsnew9tz6bj9yzbs86i967p6l93im6zm).
