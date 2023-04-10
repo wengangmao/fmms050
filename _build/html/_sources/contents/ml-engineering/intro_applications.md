@@ -9,12 +9,12 @@ In this section, we will describe some basic terminologies of machine learning m
 <center><span style = "background: green; color: yellow; font-weight: 1000; font-size: 30px; align: center"> "Save the Earth, not to find the next ..." </span></center>
 --->
 
-Please download the lecture through [Lecture 1: course contents](./lectures/Lecture 1 - Course contents.pdf). 
+Please download the lecture through [Lecture 1: course contents](https://github.com/wengangmao/fmms050/blob/main/contents/ml-engineering/lectures/Lecture%201%20-%20Course%20contents.pdf). 
 
 
 ```{figure} ./lectures/lecture1.png
 ---
-height: 500px
+height: 800px
 name: lecture1
 ---
 ```
