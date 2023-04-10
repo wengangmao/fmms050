@@ -1,4 +1,0 @@
-# Generalized linear regression
-
-+++
----
