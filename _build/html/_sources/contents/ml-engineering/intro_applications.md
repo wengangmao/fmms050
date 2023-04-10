@@ -9,7 +9,7 @@ In this section, we will describe some basic terminologies of machine learning m
 <center><span style = "background: green; color: yellow; font-weight: 1000; font-size: 30px; align: center"> "Save the Earth, not to find the next ..." </span></center>
 --->
 
-Please download the lecture through [Lecture 1: course contents](https://github.com/wengangmao/fmms050/blob/main/contents/ml-engineering/lectures/Lecture%201%20-%20Course%20contents.pdf). 
+
 
 
 ```{figure} ./lectures/lecture1.png
@@ -19,3 +19,5 @@ name: lecture1
 ---
 ```
 <center><span style = "color: red; font-weight: 500;  font-size: 30px">Chalmers FMMS050: Lecture 1</span></center>  <br />
+
+<center><span style = "color: red; font-weight: 500;  font-size: 30px"> Please download the lecture through [Lecture 1: course contents](https://github.com/wengangmao/fmms050/blob/main/contents/ml-engineering/lectures/Lecture%201%20-%20Course%20contents.pdf). </span></center>  <br />
