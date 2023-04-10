@@ -1,0 +1,630 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Project 1: Roll decay damping &#8212; ML for engineering mechanics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/assignment/project1';</script>
+    <link rel="shortcut icon" href="../../_static/learning.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="ARIMA models" href="../time-series/arima.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../introduction.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/learning.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/learning.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../introduction.html">
+                    FMMS050 - Statistical regression and machine learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">PART 1 -- MACHINE LEARNING FOR ENGINEERING APPLICATIONS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ml-engineering/intro_applications.html">Lecture 1 -- AI/ML terminologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ml-engineering/ml-types.html">Types of machine learning methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ml-engineering/basic-math.html">Basic mathematics for machine learning</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PART 2 -- STATISTICAL REGRESSION</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../regression/interperations.html">Lecture 2 -- Regression and interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../regression/tutorials/lecture2/examples.html">Lecture 2 -- Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../regression/tutorials/lecture2/excercise.html">Lecture 2 -- Excercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../regression/reg-gradient.html">Gradient for regression (parameter estimations)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../regression/poly-spline.html">Polynominal and spline fitting</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../regression/poly-spline_tutorial.html">Tutorial for polynominal/spline fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../regression/poly-spline_codes.html">Example codes for polynominal/spline fitting</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../regression/glr.html">Generalized linear regression</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../regression/glr_codes.html">Example codes for generalized linear regression</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../regression/gam-mem.html">Generalized additive and mixed dffect models</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../regression/gam-mem_tutorial.html">Tutorial for GAM and MEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../regression/gam-mem_codes.html">Example codes for GAM and MEM</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PART 3 -- MACHINE LEARNING METHODS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/logistic.html">Logistical regression and classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/ann.html">Artificial neural network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/svm.html">Support vector machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/trees.html">Decision trees and ensemble algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/boost.html">Boosting methods (XGBoost)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PART 4 -- TIME SERIES LEARNING METHODS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../time-series/gaussian-transform.html">Gaussian transformation methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time-series/stationary-gaussian.html">Basic properties of stationary Gaussian process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time-series/acf.html">Autocorrelation and Conditional expectation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time-series/ar-ma.html">Auto regressive models and Moving average models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../time-series/arima.html">ARIMA models</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PROJECT ASSIGNMENT</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project 1 -- Simple regression for roll damping</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/wengangmao/fmms050" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wengangmao/fmms050/edit/master/./contents/assignment/project1.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wengangmao/fmms050/issues/new?title=Issue%20on%20page%20%2Fcontents/assignment/project1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/contents/assignment/project1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project 1: Roll decay damping</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="project-1-roll-decay-damping">
+<h1>Project 1: Roll decay damping<a class="headerlink" href="#project-1-roll-decay-damping" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<center><span style = "color: red; font-weight: 500;  font-size: 30px">Chalmers FMMS050 Project 1: Linear regression for roll damping </span></center>  <br />
+<p>The first project assignment is to use the basic regression method to estimate the coefficients for roll damping models. You need to understand and explain the meanings of the regression methods.</p>
+<figure class="align-default" id="project1">
+<a class="reference internal image-reference" href="../../_images/project1.png"><img alt="../../_images/project1.png" src="../../_images/project1.png" style="height: 800px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>**You can access the pdf file of the assginment project through <a class="reference external" href="https://github.com/wengangmao/fmms050/blob/main/contents/assignment/PhD_FMMS050_projects_description.pdf">project description</a></p></li>
+<li><p><strong>You can download <a class="reference external" href="https://data.mendeley.com/datasets/2stvkyngj9/2">data-location1</a>,<a class="reference external" href="https://chalmersuniversity.box.com/s/wsnew9tz6bj9yzbs86i967p6l93im6zm">data-location2</a></strong></p></li>
+<li><p><strong>NB: you can also download the data from the Github repository</strong></p></li>
+</ul>
+<!-- 
+```
+#  A parameters identification technique (PIT) is often used to obtain the damping coefficients from the roll decay tests. In this technique, parameters in a mathematical
+#  model are determined in order to get the best fit to a roll decay time
+#  signal. A derivation of a mathematical model suitable for this study is
+#  described below together with a description of how the parameters:
+#  the inertia coefficients $A_{44}$, the damping $B_{44}$ and the stiffness $C_{44}$ as in Eq.\ref{eq:roll_decay_equation_general_himeno} are determined. The roll
+#  decay motion can be expressed in general form  but with nonlinear stiffness:
+#  \begin{equation}
+#  A_{44} \ddot{\phi} + \operatorname{B_{44}}\left(\dot{\phi}\right) + \operatorname{C_{44}}\left(\phi\right) = 0,
+#  \label{eq:roll_decay_equation_general_himeno}
+#  \end{equation}
+#  where $B_{44}(\dot{\phi})$ and $C_{44}(\phi)$ are the damping and
+#  stiffness models. A cubic model can be obtained by using cubic damping:
+#  \begin{equation}
+#  \operatorname{B_{44}}\left(\dot{\phi}\right) = B_{1} \dot{\phi} + B_{2} \left|{\dot{\phi}}\right| \dot{\phi} + B_{3} \dot{\phi}^{3}
+#  \label{eq:b44_cubic_equation}
+#  \end{equation}
+#  And a higher order stiffness model:
+#  \begin{equation}
+#  \operatorname{C_{44}}\left(\phi\right) = C_{1} \phi + C_{3} \phi^{3} + C_{5} \phi^{5}
+#  \label{eq:restoring_equation_cubic}
+#  \end{equation}
+#  The total equation is then written:
+#  \begin{equation}
+#  A_{44} \ddot{\phi} + \left(B_{1} + B_{2} \left|{\dot{\phi}}\right| + B_{3} \dot{\phi}^{2}\right) \dot{\phi} + \left(C_{1} + C_{3} \phi^{2} + C_{5} \phi^{4}\right) \phi = 0
+#  \label{eq:roll_decay_equation_cubic}
+#  \end{equation}
+#  NB: this equation does not have one unique solution however. If all parameters would be multiplied
+#  by a factor $k$ these parameters would also yield as a solution to the equation. 
+#  
+#  The parameters of this equation can be identified using least square fit if the time signals $\phi(t)$, $\dot{\phi}(t)$ and
+#  $\ddot{\phi}(t)$ are all known. For model tests, where only the roll signal $\phi(t)$ is known, the other time derivatives can be estimated
+#  using numerical differentiation of a low-pass filtered roll signal or
+#  Kalman filtered roll signal. The filtering will however introduce some
+#  errors in itself. So instead of using this ``differentiation approach
+#  it has been found that solving the differential equation numerically for
+#  estimated parameter values determined using optimization. One problem with this ``Integration
+#  approach" is that in order to converge, the optimization needs a
+#  reasonable first guess of the parameters. The Differentiation approach
+#  has therefore been used as a pre-step to obtain a very good first guess
+#  of the parameters that can be passed on to the Integration approach.\\
+#  
+#  \begin{comment}
+#  The differential equation is numerically solved as an initial
+#  value problem, where the initial states for $\phi(t)$,
+#  $\dot{\phi}(t)$ and $\ddot{\phi}(t)$ are used to estimate the
+#  following states, by conducting very small time steps using the
+#  following expression for the acceleration:
+#  \begin{equation}
+#  \ddot{\phi} = - B_{1A} \dot{\phi} - B_{2A} \left|{\dot{\phi}}\right| \dot{\phi} - B_{3A} \dot{\phi}^{3} - C_{1A} \phi - C_{3A} \phi^{3} - C_{5A} \phi^{5}
+#  \label{eq:eq_phi1d}
+#  \end{equation}
+#  This numerical solution can be compared with an analytical solution for
+#  a linear model.  For this case the relation between $\zeta$ and $B_1$ can
+#  be expressed as:
+#  \begin{equation}
+#  B_{1} = 2 A_{44} \omega_{0} \zeta
+#  \label{eq:B_1_zeta_eq}
+#  \end{equation}
+#  and the natural frequency can be obtained from:
+#  \begin{equation}
+#  \omega_{0} = \sqrt{\frac{C_{1}}{A_{44}}}
+#  \label{eq:omega0_eq}
+#  \end{equation}
+#  The analytical and numerical solutions are very similar according to the
+#  example: $A_{44} = 1.0$, $B_1 = 0.3$, $C_1 = 5.0$ shown in Fig.\ref{fig:analytical_numerical}.
+#  \begin{figure}[H]
+#  \begin{center}\includegraphics[width = 0.5\textwidth]{figures/analytical_numerical.pdf}\end{center}
+#  \vspace{-1cm}
+#  \caption{Comparison of analytical solution and numerical simulation of a roll decay test.}
+#  \label{fig:analytical_numerical}
+#  \end{figure}
+#  \end{comment}
+#  
+#  
+#  \subsection*{\textbf{Roll damping estimation for KVLCC}}
+#  
+#  Your task is to use different statistical regression methods to obtain different parameters in the Roll decay Eq.(\ref{eq:roll_decay_equation_cubic})
+#  , especially how to get the roll damping, and discuss how sensitive of the estimation of the roll damping.
+#  
+#  \subsection*{Test at 0 knots}\label{test-at-0-knots}
+#  Two roll decay model tests were conducted at zero speed referred to as Run 1 and 2.
+#  These tests where analyzed by fitting a cubic model
+#  to the model test data. The two models were very similar in terms of roll damping and stiffness, suggesting good repeatability in both the model tests and in the parameter
+#  identification technique (PIT) used. It can be seen that the dampings,
+#  from each individual oscillation obtained with the logarithmic decrement
+#  method, are very scattered. This scatter does not seem to influence the
+#  two models for the 0 speed case, which are very similar.
+#  \subsubsection*{Test at 15.5 knots}\label{test-at-15.5-knots}
+#  One roll decay model tests, referred to as Run 3, was conducted at a ship speed corresponding to
+#  15.5 knots full scale ship speed. The
+#  ship got a small yaw rate
+#  at the end of test, giving a small steady roll angle due to the
+#  centrifugal force. Since this effect is not included in the mathematical
+#  model used, the steady roll angle was instead removed by removing the
+#  linear trend in the roll angle signal.
+
+-->
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents\assignment"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../time-series/arima.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ARIMA models</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Wengang Mao
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023-2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

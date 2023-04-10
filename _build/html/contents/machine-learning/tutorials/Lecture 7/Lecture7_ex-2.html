@@ -1,0 +1,957 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; ML for engineering mechanics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/machine-learning/tutorials/Lecture 7/Lecture7_ex-2';</script>
+    <link rel="shortcut icon" href="../../../../_static/learning.png"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../introduction.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/learning.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../../_static/learning.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../introduction.html">
+                    FMMS050 - Statistical regression and machine learning
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">PART 1 -- MACHINE LEARNING FOR ENGINEERING APPLICATIONS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-engineering/intro_applications.html">Lecture 1 -- AI/ML terminologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-engineering/ml-types.html">Types of machine learning methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-engineering/basic-math.html">Basic mathematics for machine learning</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PART 2 -- STATISTICAL REGRESSION</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../regression/interperations.html">Lecture 2 -- Regression and interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../regression/tutorials/lecture2/examples.html">Lecture 2 -- Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../regression/tutorials/lecture2/excercise.html">Lecture 2 -- Excercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../regression/reg-gradient.html">Gradient for regression (parameter estimations)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../regression/poly-spline.html">Polynominal and spline fitting</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../regression/poly-spline_tutorial.html">Tutorial for polynominal/spline fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../regression/poly-spline_codes.html">Example codes for polynominal/spline fitting</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../regression/glr.html">Generalized linear regression</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../regression/glr_codes.html">Example codes for generalized linear regression</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../regression/gam-mem.html">Generalized additive and mixed dffect models</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../regression/gam-mem_tutorial.html">Tutorial for GAM and MEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../regression/gam-mem_codes.html">Example codes for GAM and MEM</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PART 3 -- MACHINE LEARNING METHODS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../logistic.html">Logistical regression and classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ann.html">Artificial neural network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../svm.html">Support vector machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../trees.html">Decision trees and ensemble algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boost.html">Boosting methods (XGBoost)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PART 4 -- TIME SERIES LEARNING METHODS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../time-series/gaussian-transform.html">Gaussian transformation methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../time-series/stationary-gaussian.html">Basic properties of stationary Gaussian process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../time-series/acf.html">Autocorrelation and Conditional expectation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../time-series/ar-ma.html">Auto regressive models and Moving average models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../time-series/arima.html">ARIMA models</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PROJECT ASSIGNMENT</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../assignment/project1.html">Project 1 -- Simple regression for roll damping</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://wengangmao.github.io/fmms050/hub/user-redirect/git-pull?repo=https%3A//github.com/wengangmao/fmms050&urlpath=tree/fmms050/./contents/machine-learning/tutorials/Lecture+7/Lecture7_ex-2.ipynb&branch=master" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/wengangmao/fmms050" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wengangmao/fmms050/edit/master/./contents/machine-learning/tutorials/Lecture 7/Lecture7_ex-2.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wengangmao/fmms050/issues/new?title=Issue%20on%20page%20%2Fcontents/machine-learning/tutorials/Lecture 7/Lecture7_ex-2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/contents/machine-learning/tutorials/Lecture 7/Lecture7_ex-2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.neural_network</span> <span class="kn">import</span> <span class="n">MLPClassifier</span> <span class="k">as</span> <span class="n">DNN</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span> <span class="k">as</span> <span class="n">cv</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_breast_cancer</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span> <span class="k">as</span> <span class="n">RFC</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">load_breast_cancer</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">data</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">target</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span> <span class="k">as</span> <span class="n">SS</span>
+<span class="n">X_</span> <span class="o">=</span> <span class="n">SS</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">times</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
+<span class="n">dnn</span> <span class="o">=</span> <span class="n">DNN</span><span class="p">(</span><span class="n">hidden_layer_sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span><span class="n">random_state</span><span class="o">=</span><span class="mi">420</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cv</span><span class="p">(</span><span class="n">dnn</span><span class="p">,</span><span class="n">X_</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">times</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9806862288464524
+10.18770432472229
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dnn</span> <span class="o">=</span> <span class="n">DNN</span><span class="p">(</span><span class="n">hidden_layer_sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,),</span>
+        <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">,</span>
+        <span class="n">solver</span><span class="o">=</span><span class="s2">&quot;sgd&quot;</span><span class="p">,</span>
+        <span class="n">learning_rate_init</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">learning_rate</span> <span class="o">=</span> <span class="s2">&quot;invscaling&quot;</span><span class="p">,</span>
+        <span class="n">power_t</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="n">batch_size</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+        <span class="n">max_iter</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span>
+        <span class="n">random_state</span><span class="o">=</span><span class="mi">420</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dnn</span><span class="o">.</span><span class="n">coefs_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[array([[-4.17596414e-01, -1.48419775e-01, -4.29184936e-01,
+         -7.43552173e-01,  3.83854177e-01, -7.97619100e-01,
+         -1.56208474e-01, -4.90088320e-01,  4.31618493e-01,
+         -3.70042612e-01, -2.01993585e-01,  2.23947270e-01,
+         -9.01819245e-01, -4.53543039e-01,  8.34168792e-01,
+         -2.93744433e-01, -1.86687185e-01, -1.06768466e-01,
+         -6.99340520e-02,  1.32475943e-01],
+        [ 6.85512118e-02, -3.41560979e-01, -6.94878193e-02,
+         -1.60544036e-01, -1.41115249e+00, -5.62433321e-01,
+         -2.77367862e-01, -1.52279757e-01,  1.44854630e-01,
+         -7.30926154e-02, -4.63730885e-01,  4.03432318e-01,
+         -9.40562232e-03, -1.47364860e-01,  6.99654175e-01,
+          1.70161828e-01,  3.56157944e-01, -3.09518618e-01,
+         -4.00990898e-01, -6.57836591e-03],
+        [-1.60932508e-01, -2.51548172e-01, -7.60034201e-02,
+         -4.35258080e-01, -1.69072118e-01, -6.35916221e-01,
+         -1.59900703e-01, -1.50802286e-01,  5.60704335e-01,
+         -1.76861870e-01,  1.82331053e-01,  2.90209568e-01,
+         -5.93738712e-01, -4.02845222e-01,  6.88327502e-01,
+          8.40444854e-02, -2.58416964e-01, -4.33065078e-01,
+         -9.22183331e-02, -4.16139631e-01],
+        [-7.62840665e-02, -2.94333142e-01, -5.65647841e-01,
+         -3.84838211e-01, -1.26877430e-01, -1.07348584e+00,
+         -3.85469953e-02, -5.10165131e-01,  1.64107969e-01,
+         -6.44107623e-01, -3.16171875e-02,  5.03896662e-01,
+         -9.46539199e-01, -2.34486860e-01,  4.50634882e-01,
+         -9.73050275e-02, -1.71490784e-01, -1.44173308e-01,
+         -3.35449533e-01, -9.95447114e-02],
+        [ 3.62695432e-01, -4.05797217e-01, -7.89569090e-02,
+         -1.15452434e-01,  3.91607309e-01, -1.62655734e-01,
+         -1.25230119e-01, -5.01596672e-01,  2.03315245e-01,
+         -1.46150502e-01,  2.15130588e-01,  5.28031108e-01,
+         -5.56423949e-01,  2.48707260e-01,  3.38833338e-01,
+         -1.89774191e-01,  6.97810866e-02,  9.48573744e-02,
+         -2.65693737e-01, -4.39601871e-01],
+        [ 1.27979840e-01, -6.01506156e-02, -2.60037596e-01,
+         -8.45306901e-01,  2.10293727e-01, -9.57099630e-01,
+         -6.23815866e-02,  1.05396001e-01, -7.93549992e-02,
+          2.06523028e-02,  5.46424142e-02,  6.01397946e-01,
+         -9.51493063e-01, -6.97345581e-01,  2.60783932e-01,
+          2.75972135e-01,  2.14116181e-02, -2.50009724e-01,
+         -1.47705972e-01,  3.96092021e-01],
+        [ 5.37708794e-02, -2.69357445e-01, -8.25995263e-02,
+         -1.00210373e-01, -4.12903255e-01, -6.43231091e-01,
+         -4.26540003e-01, -5.06999274e-01,  2.82900501e-01,
+         -4.95682146e-01,  3.98748519e-01,  5.18609702e-01,
+         -4.99478687e-01, -4.73183787e-01,  9.10298075e-01,
+         -8.89632442e-02, -4.21649298e-03, -4.21886525e-02,
+         -6.30012161e-01, -8.97341484e-02],
+        [-5.78171961e-01, -2.69299772e-01, -5.12308962e-01,
+         -9.62079201e-02, -4.93945423e-01, -1.08233942e+00,
+         -3.28454659e-01, -5.42472166e-01,  5.48341710e-01,
+         -5.91611124e-01,  4.04046841e-01,  5.46350892e-01,
+         -3.67147119e-01, -2.70345822e-01,  8.69737075e-01,
+         -1.80683539e-01, -2.45594830e-01, -4.68222713e-02,
+         -1.90279956e-01, -3.18590946e-01],
+        [-9.51928489e-02,  3.56443514e-01, -6.84509242e-02,
+          1.09166572e-02, -1.86201446e-01, -1.44382581e-01,
+         -2.20040070e-01, -1.66811619e-02, -2.81989808e-01,
+          5.73528381e-01,  6.23563429e-02,  5.06538779e-01,
+         -9.75586418e-02, -3.26345805e-01,  1.97693276e-01,
+         -8.58140056e-03, -1.20938286e-01,  1.15857735e-01,
+         -1.37088887e-01, -4.43852785e-02],
+        [-1.30326202e-02, -9.50873289e-02,  2.81397826e-01,
+         -2.56027599e-01, -3.37970417e-01,  7.53986923e-02,
+          1.71669069e-02, -1.15815232e-01, -4.25203268e-01,
+          3.39836898e-02,  8.04844558e-02, -7.62392867e-01,
+         -1.35383949e-01,  1.77059815e-02, -1.65513950e-01,
+          1.03145190e-01, -4.78971055e-01,  9.49652523e-02,
+          1.55347799e-01,  2.99387772e-01],
+        [-3.75392669e-02, -9.22253620e-02,  1.86963689e-01,
+         -7.00392400e-02, -4.64553651e-01, -4.29544114e-01,
+         -4.98329493e-01, -3.31188794e-01, -2.48947742e-02,
+         -6.23773590e-01,  4.03859796e-01,  3.27990427e-01,
+         -3.37872055e-01,  2.64461315e-01,  7.25929307e-01,
+          3.24402961e-01, -7.44975368e-01,  2.02805490e-01,
+         -3.18604170e-01, -3.77682878e-01],
+        [ 3.98643928e-02,  1.60781733e-01, -2.84642002e-01,
+          1.61672496e-01, -5.99944514e-01, -4.36741403e-01,
+          1.52604988e-01, -9.08880448e-03, -1.78311684e-01,
+         -1.62029133e-01, -2.80852522e-01, -2.40369697e-01,
+          1.59211962e-01, -4.67389802e-01, -3.08948049e-01,
+          2.15804779e-01,  1.67104884e-01, -2.71148500e-01,
+          3.67331124e-01,  5.10189027e-02],
+        [-2.99887575e-01, -1.36418151e-01, -1.74695185e-01,
+          1.41616632e-01, -3.34547330e-01, -3.19572004e-01,
+         -2.11067415e-01, -2.62933807e-01, -1.39655199e-01,
+         -5.49345222e-01,  1.44731634e-01,  6.08331985e-01,
+         -7.34803868e-01, -7.38113587e-02,  4.25251359e-01,
+          2.08590638e-01, -4.42909975e-01,  4.66078236e-02,
+         -2.99215446e-01, -4.26345169e-01],
+        [-2.86627118e-01,  8.14054668e-02,  4.80528380e-02,
+         -2.66759950e-02, -7.58397208e-01, -7.47404540e-01,
+         -1.42599622e-01, -5.67100978e-01,  2.43521615e-01,
+         -4.55002354e-01, -2.24112956e-01,  7.75770368e-01,
+         -3.04088816e-01,  2.19091689e-01,  8.87623651e-01,
+          1.13047090e-01, -1.69814586e-01,  2.06983775e-01,
+         -6.06368024e-01, -3.26091918e-01],
+        [ 2.63111861e-01, -2.62910144e-01, -3.85434017e-01,
+          1.03724914e-01,  3.16973382e-01,  4.21762687e-02,
+          3.91280865e-01, -1.36287219e-01,  3.80465573e-01,
+          2.67267778e-01, -1.53798847e-01, -2.16549432e-01,
+          3.62369337e-01, -4.43275538e-01, -3.29933936e-01,
+          8.47618099e-02, -4.21639567e-02,  1.81044061e-01,
+         -2.37363778e-01, -2.72288421e-01],
+        [-1.24705891e-01,  2.31885376e-01, -1.06158166e-01,
+         -3.10245260e-01,  6.48191199e-01, -7.04147727e-01,
+         -1.26229506e-01,  4.48475993e-01, -2.72368227e-01,
+          3.33969249e-01, -1.22203982e-01, -3.09335999e-01,
+         -5.55201336e-01, -7.50895292e-01, -4.98198336e-01,
+         -1.66159354e-01,  6.01450472e-01, -6.78586974e-02,
+          1.08190709e-01,  7.11820307e-01],
+        [-1.32910443e-01, -1.49274736e-01, -2.10828410e-01,
+         -3.40610229e-01, -7.91990476e-02, -4.04203561e-01,
+         -1.57778423e-01,  9.06773828e-02,  2.08015716e-01,
+          1.49001402e-01, -4.12381738e-01, -1.23466677e-03,
+          7.18911100e-02, -4.28659835e-03, -1.68269061e-01,
+          1.60747353e-01, -3.75096654e-01,  1.25835528e-01,
+         -2.04872406e-02, -7.98131740e-02],
+        [-1.18350641e-01,  2.47867264e-01, -1.86504382e-02,
+          2.16781611e-01, -5.58603348e-01, -3.59786204e-01,
+         -4.90266479e-01, -4.28159422e-01,  1.97734933e-01,
+         -4.20180522e-01, -6.71115015e-02,  1.68842266e-01,
+         -3.01296877e-01, -2.28962517e-01, -1.77575179e-01,
+          3.29373224e-01, -3.42122929e-01, -2.22602251e-01,
+         -1.27874413e-01, -9.11598215e-02],
+        [-1.81347204e-01, -1.70786917e-01, -2.04826776e-01,
+         -8.38216206e-02,  1.66143369e-01, -4.05789381e-01,
+          4.68106065e-01,  1.28910891e-01, -3.34040772e-01,
+          1.29057729e-01, -1.55271486e-01,  5.98050187e-01,
+          7.03483384e-02, -3.62398625e-01, -4.44994205e-01,
+          1.69305842e-01,  1.17020808e-01,  1.18582683e-01,
+          2.93202935e-01, -8.33342642e-02],
+        [ 8.66722010e-02,  2.90985689e-01, -3.58588543e-01,
+         -3.67570850e-01,  4.59538737e-02,  2.35672559e-01,
+          2.26712516e-01,  5.96592790e-01,  2.87185549e-02,
+          1.15507667e-01, -1.58299101e-01, -5.97336580e-01,
+          2.91671630e-02,  2.89722886e-02, -7.82765121e-01,
+         -3.65544529e-01,  7.54503228e-02,  9.07621998e-02,
+         -2.21526860e-02,  3.99454697e-01],
+        [-1.01846057e-01, -5.25778786e-01, -4.99429155e-01,
+         -6.03540740e-01, -4.32104791e-01, -4.95927707e-01,
+         -1.99053486e-01, -3.44807934e-01,  5.93582655e-01,
+         -3.10980024e-01,  2.77749127e-01,  5.41305236e-01,
+         -7.89050138e-01,  2.25925108e-02,  1.04898839e+00,
+          5.26221172e-02, -4.33649940e-01,  1.14007663e-01,
+         -5.58068667e-01, -7.74830080e-01],
+        [-3.49118665e-01, -4.32247641e-01, -1.42290610e-01,
+          2.98625065e-01, -9.67447340e-01, -4.88734682e-01,
+         -1.78478890e-01, -3.23327952e-02,  1.52821780e-01,
+          2.03506495e-02,  2.72715475e-02,  7.39268411e-01,
+         -1.84392641e-01,  8.32997437e-02,  5.28400499e-01,
+          1.62881975e-01, -4.61204543e-02,  1.51989522e-01,
+          4.24299675e-02, -4.53271921e-01],
+        [-6.07474247e-01, -8.21480967e-02,  7.40422737e-02,
+         -5.54400215e-01, -1.24269829e-01, -6.21459487e-01,
+         -2.30067198e-01, -5.25257589e-01,  4.80937498e-01,
+         -7.82201655e-01,  1.75222148e-01,  4.31745134e-01,
+         -6.20398913e-01,  1.68954043e-01,  1.16268091e+00,
+         -3.23256042e-01, -3.23469413e-01, -1.78074638e-01,
+         -6.42979054e-01, -5.35934689e-01],
+        [-3.69233452e-01, -4.84198586e-01,  6.93474983e-02,
+         -6.22967740e-01, -5.77863840e-01, -4.64762476e-01,
+         -1.97888848e-01, -4.81277086e-01,  5.29892696e-01,
+         -6.57443604e-01,  1.40110252e-01,  3.02489596e-01,
+         -5.85213370e-01, -3.41538699e-01,  8.09915995e-01,
+         -1.19457795e-01, -8.51261376e-02, -3.60091708e-01,
+         -2.99017796e-01, -7.11147968e-01],
+        [-1.09565394e-01,  4.37911071e-02,  7.33270547e-02,
+         -3.44818610e-01,  7.08595120e-01, -4.30073622e-01,
+          1.00783526e-01, -3.77353726e-01,  3.31173669e-01,
+         -5.70689001e-02,  3.42760929e-01,  5.66088039e-01,
+         -3.42361579e-01,  9.16307517e-02,  6.92340012e-01,
+          1.46626528e-01, -3.52288148e-01, -3.03009694e-01,
+         -4.34144476e-01, -6.27010051e-01],
+        [-4.30453096e-01,  4.58780355e-02, -6.58515422e-02,
+         -5.06362677e-01, -8.10182354e-02, -2.72116625e-01,
+         -4.07333223e-01,  1.06078468e-01,  2.49824535e-01,
+          8.40199839e-02,  5.24392921e-01, -5.77899700e-02,
+         -4.85082080e-01, -3.55565676e-02,  2.60901594e-01,
+          2.52283089e-01,  1.36500599e-01,  1.72886791e-01,
+         -3.85889227e-01,  1.27841472e-01],
+        [-5.93454468e-02, -3.66837041e-01, -1.55132448e-01,
+         -3.58375872e-02, -6.20681997e-01, -3.60412942e-01,
+         -5.32975233e-02, -1.43681075e-01,  3.38791071e-01,
+         -5.57725963e-01,  3.77146429e-01,  6.27751782e-01,
+         -2.32727395e-01,  3.11821103e-01,  6.31285348e-01,
+         -3.06133138e-01, -2.76152268e-01,  5.29280347e-02,
+         -3.53822526e-01, -4.58019982e-01],
+        [-4.88384789e-01,  2.95105893e-02, -5.20602262e-02,
+         -1.87305372e-02, -2.16655088e-01, -8.74551822e-01,
+         -2.26567244e-01, -2.07924036e-01,  4.12696968e-01,
+         -1.00649968e-01,  1.30059347e-01,  2.71988334e-01,
+         -4.49993047e-01,  2.20061868e-01,  5.86075726e-01,
+         -1.15004895e-01, -7.60206761e-01,  1.83790329e-02,
+         -6.91311458e-01, -3.17034628e-01],
+        [-2.26011986e-01, -8.22180954e-02, -3.72757125e-01,
+          1.73153313e-01, -1.45164672e-02, -4.53520741e-01,
+         -3.05145291e-01, -2.02547150e-01, -4.99175035e-02,
+         -1.54737171e-01, -2.33926341e-01,  7.53345524e-01,
+         -2.22373152e-01,  9.45743155e-02, -6.88270073e-02,
+         -2.89939219e-02, -3.79741344e-01, -2.52409727e-01,
+         -4.10969873e-01, -1.27861190e-01],
+        [-1.46802704e-01, -2.76352817e-01,  3.06236341e-01,
+         -3.47610871e-01, -6.29841751e-01,  4.59555595e-01,
+         -6.63335789e-02, -5.52100143e-01,  1.38785225e-01,
+         -1.99609503e-01,  7.01587471e-01, -4.74079967e-01,
+         -3.86832088e-01,  1.64138774e-01,  4.11078895e-01,
+         -4.07790600e-02, -1.60915893e-01, -4.10224601e-01,
+         -1.07562773e-01,  1.47038761e-02]]),
+ array([[ 0.29792802],
+        [ 0.41759903],
+        [-0.71344849],
+        [-1.51073569],
+        [ 2.3933528 ],
+        [-0.95414011],
+        [ 0.92964497],
+        [ 1.30466836],
+        [-0.92870428],
+        [ 1.00791141],
+        [-1.64939757],
+        [-1.56411542],
+        [-0.55864417],
+        [-1.43756883],
+        [-1.50719567],
+        [-0.10551555],
+        [ 1.30425806],
+        [-0.10174263],
+        [ 0.89543607],
+        [ 1.5637587 ]])]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">dnn</span><span class="o">.</span><span class="n">coefs_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">dnn</span><span class="o">.</span><span class="n">coefs_</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(30, 20)
+(20, 1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(569, 30)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># how many parameters?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dnn</span><span class="o">.</span><span class="n">coefs_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span> <span class="c1"># w1^t</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(20,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dnn</span><span class="o">.</span><span class="n">intercepts_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[array([-0.01208511,  0.23006008, -0.28853019, -0.29669951,  0.3123024 ,
+        -0.37657032,  0.03147937,  0.53339565,  0.24325214,  0.02444767,
+        -0.25642082, -0.0451247 , -0.63745918,  0.10328563,  0.72275721,
+        -0.21191841,  0.17054416, -0.34092959,  0.36398215,  0.78700881]),
+ array([-0.4722992])]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">dnn</span><span class="o">.</span><span class="n">intercepts_</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(20,)
+(1,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dnn</span><span class="o">.</span><span class="n">loss_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0043848977190958085
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python379jvsc74a57bd0883a546819ded8cc123fb1b6e6de7f45423954083a6333be63329b283faf8962",
+            path: "./contents\machine-learning\tutorials\Lecture 7"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python379jvsc74a57bd0883a546819ded8cc123fb1b6e6de7f45423954083a6333be63329b283faf8962'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Wengang Mao
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023-2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
