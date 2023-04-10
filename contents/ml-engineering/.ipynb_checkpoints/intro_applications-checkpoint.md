@@ -12,10 +12,10 @@ In this section, we will describe some basic terminologies of machine learning m
 Please download the lecture through [Lecture 1: course contents](./lectures/Lecture 1 - Course contents.pdf). 
 
 
-```{figure} ./images/lecture1.png
+```{figure} contents/images/lecture1.png
 ---
 height: 500px
 name: lecture1
 ---
 ```
-<center><span style = "color: red; font-weight: 500;  font-size: 30px">A demo for the voyage optimization developed by us!</span></center>  <br />
+<center><span style = "color: red; font-weight: 500;  font-size: 30px">Chalmers FMMS050: Lecture 1</span></center>  <br />
