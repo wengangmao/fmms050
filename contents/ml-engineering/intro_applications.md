@@ -9,13 +9,13 @@ In this section, we will describe some basic terminologies of machine learning m
 <center><span style = "background: green; color: yellow; font-weight: 1000; font-size: 30px; align: center"> "Save the Earth, not to find the next ..." </span></center>
 --->
 
-We are a team of researchers based at [Chalmers University of Technology](https://www.chalmers.se/en/departments/m2/Pages/default.aspx). 
-The research activities are mainly supported by e.g., Swedish VR, EU FP7, EU H2020, Swedish Transport Administration, Lighthouse, Vinnova, Chalmers AoAs, etc.
+Please download the lecture through [Lecture 1: course contents](./lectures/Lecture 1 - Course contents.pdf). 
 
-```{figure} ./images/3dda_voyplan.gif
+
+```{figure} ./images/lecture1.png
 ---
 height: 500px
-name: directive-fig
+name: lecture1
 ---
 ```
 <center><span style = "color: red; font-weight: 500;  font-size: 30px">A demo for the voyage optimization developed by us!</span></center>  <br />
