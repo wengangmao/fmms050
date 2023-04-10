@@ -1,4 +1,0 @@
-# Polynomial and Spline fitting
-
-+++
----

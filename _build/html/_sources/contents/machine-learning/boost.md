@@ -1,4 +1,0 @@
-# Boosting method (XGBoost)
-
-+++
----
