@@ -12,19 +12,19 @@ parts:
     title: Basic mathematics for machine learning
 
 
-- caption: DATA FILTERING METHODS
-  chapters:
-  - file: contents/data-filter/fft.md
-    title: Fast Fourier Transform
-  - file: contents/data-filter/moving-average.md
-    title: Moving Average Methods
-  - file: contents/data-filter/kalmar.md
-    title: Kalmar filtering
-    sections:
-     - file: contents/data-filter/kalmar_tutorial.md
-       title: Tutorial of Kalmar filter methods    
-     - file: contents/data-filter/kalmar_codes.ipynb
-       title: Example codes for Kalmar filter methods
+#- caption: DATA FILTERING METHODS
+#  chapters:
+#  - file: contents/data-filter/fft.md
+#    title: Fast Fourier Transform
+#  - file: contents/data-filter/moving-average.md
+#    title: Moving Average Methods
+#  - file: contents/data-filter/kalmar.md
+#    title: Kalmar filtering
+#    sections:
+#     - file: contents/data-filter/kalmar_tutorial.md
+#       title: Tutorial of Kalmar filter methods    
+#     - file: contents/data-filter/kalmar_codes.ipynb
+#       title: Example codes for Kalmar filter methods
 
 - caption: STATISTICAL REGRESSION
   chapters:
