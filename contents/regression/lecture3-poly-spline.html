@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial for GAM and MEM methods &#8212; ML for engineering mechanics</title>
+    <title>Lecture 3 – Polynomial and Spline Regression &#8212; ML for engineering mechanics</title>
   
   
   
@@ -62,12 +62,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/regression/gam-mem_tutorial';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/regression/lecture3-poly-spline';</script>
     <link rel="shortcut icon" href="../../_static/learning.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Example codes for GAM and MEM tutorials" href="gam-mem_codes.html" />
-    <link rel="prev" title="Generalized additive model and mixed effect model" href="gam-mem.html" />
+    <link rel="next" title="Demonstration of examples for Lecure 3:" href="tutorials/lecture3/examples.html" />
+    <link rel="prev" title="Lecture 2 Excercise – 2D regression exercise after the class" href="tutorials/lecture2/excercise.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,22 +166,23 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PART 2 -- STATISTICAL REGRESSION</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="interperations.html">Lecture 2 -- Regression and interpretation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/lecture2/examples.html">Lecture 2 -- Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/lecture2/excercise.html">Lecture 2 -- Excercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reg-gradient.html">Gradient for regression (parameter estimations)</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="poly-spline.html">Polynominal and spline fitting</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="poly-spline_tutorial.html">Tutorial for polynominal/spline fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="poly-spline_codes.html">Example codes for polynominal/spline fitting</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lecture2-interperations.html">Lecture 2 -- Regression and interpretation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/lecture2/examples.html">Computer Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/lecture2/excercise.html">Computer Excercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="glr.html">Generalized linear regression</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="glr_codes.html">Example codes for generalized linear regression</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Lecture 3 -- Polynominal and spline fitting</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/lecture3/examples.html"><strong>Demonstration of examples for Lecure 3:</strong></a></li>
+
+
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="gam-mem.html">Generalized additive and mixed dffect models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tutorial for GAM and MEM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gam-mem_codes.html">Example codes for GAM and MEM</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lecture4-reg-gradient.html">Lecture 4 -- Model parameter estimation - gradient</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/lecture4/examples.html"><strong>Demonstration example for Lecture 4: Gradient method for parameter estimation</strong></a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lecture5-gam-mem.html">Lecture 5 - GLM GAM and Mixed-effects model</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -275,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/wengangmao/fmms050/edit/master/./contents/regression/gam-mem_tutorial.md" target="_blank"
+      <li><a href="https://github.com/wengangmao/fmms050/edit/master/./contents/regression/lecture3-poly-spline.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -292,7 +293,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/wengangmao/fmms050/issues/new?title=Issue%20on%20page%20%2Fcontents/regression/gam-mem_tutorial.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/wengangmao/fmms050/issues/new?title=Issue%20on%20page%20%2Fcontents/regression/lecture3-poly-spline.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -322,7 +323,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/contents/regression/gam-mem_tutorial.md" target="_blank"
+      <li><a href="../../_sources/contents/regression/lecture3-poly-spline.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -402,7 +403,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tutorial for GAM and MEM methods</h1>
+    <h1>Lecture 3 – Polynomial and Spline Regression</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -416,9 +417,31 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tutorial-for-gam-and-mem-methods">
-<h1>Tutorial for GAM and MEM methods<a class="headerlink" href="#tutorial-for-gam-and-mem-methods" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-3-polynomial-and-spline-regression">
+<h1>Lecture 3 – Polynomial and Spline Regression<a class="headerlink" href="#lecture-3-polynomial-and-spline-regression" title="Permalink to this heading">#</a></h1>
 <hr class="docutils" />
+<p><span style = "color: red; font-weight: 500;  font-size: 30px; text-align: left">Contents of this lecture</span>  <br /></p>
+<ul class="simple">
+<li><p>Polynomial regression</p></li>
+<li><p>Spline regression/fitting (different from interpolation)</p></li>
+<li><p>Model estimation and evaluation of goodness</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Cost/loss functions: penalties and regularization</p></li>
+<li><p>Significant test and confidence interval (more complex model does not mean better model)</p></li>
+<li><p>ANOVA, MSE and R2</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Advises when apply statistical and machine learning for modelling</p></li>
+</ul>
+<figure class="align-default" id="lecture2">
+<a class="reference internal image-reference" href="../../_images/lecture3.png"><img alt="../../_images/lecture3.png" src="../../_images/lecture3.png" style="height: 800px;" /></a>
+</figure>
+<p><strong>Please download the lecture through the following link <a class="reference external" href="https://github.com/wengangmao/fmms050/blob/main/contents/regression/lectures/Lecture%202%20-%20Regression%20and%20interperation.pdf">Lecture 3: Polynomial and Spline Regression</a></strong></p>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -453,20 +476,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="gam-mem.html"
+       href="tutorials/lecture2/excercise.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Generalized additive model and mixed effect model</p>
+        <p class="prev-next-title"><strong>Lecture 2 Excercise – 2D regression exercise after the class</strong></p>
       </div>
     </a>
     <a class="right-next"
-       href="gam-mem_codes.html"
+       href="tutorials/lecture3/examples.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Example codes for GAM and MEM tutorials</p>
+        <p class="prev-next-title"><strong>Demonstration of examples for Lecure 3:</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -2,7 +2,7 @@
 
 +++
 ---
-<center><span style = "color: red; font-weight: 500;  font-size: 30px">Chalmers FMMS050 Lecture 2: Regression and statistical interpretation</span></center>  <br />
+<span style = "color: red; font-weight: 500;  font-size: 30px">Contents of this lecture</span>  <br />
 
 Many of you may have already studied the basics of regression and fitting. In this part, we will explain how mathematically the regression can be interpreated as machine learning methods and to be connected with more advanced learning algorithms.
 
