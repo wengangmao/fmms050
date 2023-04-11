@@ -28,7 +28,7 @@ parts:
 
 - caption: PART 2 -- STATISTICAL REGRESSION
   chapters:
-  - file: contents/regression/interperations.md
+  - file: contents/regression/lecture2-interperations.md
     title: Lecture 2 -- Regression and interpretation
     sections:
     - file: contents/regression/tutorials/lecture2/examples.ipynb
@@ -36,30 +36,30 @@ parts:
     - file: contents/regression/tutorials/lecture2/excercise.ipynb
       title: Computer Excercises
       
-  - file: contents/regression/poly-spline.md
+  - file: contents/regression/lecture3-poly-spline.md
     title: Lecture 3 -- Polynominal and spline fitting   
     sections:
-    - file: contents/regression/tutorials/lecture2/examples.ipynb
+    - file: contents/regression/tutorials/lecture3/examples.ipynb
       title: Computer Examples
-    - file: contents/regression/tutorials/lecture2/excercise.ipynb
-      title: Computer Excercises    
-    
-  - file: contents/regression/reg-gradient.md
-    title: Gradient for regression (parameter estimations)
-  - file: contents/regression/glr.md
-    title: Generalized linear regression
+    - file: contents/regression/tutorials/lecture3/excercise.ipynb
+      title: Computer Excercises
+      
+  - file: contents/regression/lecture4-reg-gradient.md
+    title: Lecture 4 -- Model parameter estimation by gradient  
     sections:
-    - file: contents/regression/glr_tutorial.md
-      title: Tutorial for generalized linear regression
-    - file: contents/regression/glr_codes.ipynb
-      title: Example codes for generalized linear regression
-  - file: contents/regression/gam-mem.md
-    title: Generalized additive and mixed dffect models
+    - file: contents/regression/tutorials/lecture4/examples.ipynb
+      title: Computer Examples
+    - file: contents/regression/tutorials/lecture4/excercise.ipynb
+      title: Computer Excercises
+      
+  - file: contents/regression/lecture5-gam-mem.md
+    title: Lecture 5 -- GLM GAM and Mixed-effects model
     sections:
-    - file: contents/regression/gam-mem_tutorial.md
-      title: Tutorial for GAM and MEM
-    - file: contents/regression/gam-mem_codes.ipynb
-      title: Example codes for GAM and MEM
+    - file: contents/regression/tutorials/lecture5/examples.ipynb
+      title: Computer Examples
+    - file: contents/regression/tutorials/lecture5/excercise.ipynb
+      title: Computer Excercises
+      
       
 - caption: PART 3 -- MACHINE LEARNING METHODS
   chapters:
@@ -86,12 +86,11 @@ parts:
     title: Auto regressive models and Moving average models
   - file: contents/time-series/arima.md
     title: ARIMA models
-
+    
 - caption: PROJECT ASSIGNMENT
   chapters:
   - file: contents/assignment/project1.md
     title: Project 1 -- Simple regression for roll damping
-
 
 #- caption: DEEP LEARNING AND SPATIO-TEMPORAL MODELLING
 #  chapters:
