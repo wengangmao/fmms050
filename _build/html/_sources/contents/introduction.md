@@ -54,9 +54,18 @@ The course is divided into four parts: basis of machine learning applications, s
 * ARIMA models
 * Examples of applications
 
-The course will contain some assignments and seminars related to different methods.
+## Course Schedule for 2023@Chalmers
+
+```{figure} ./images/courseschedule.png
+---
+height: 800px
+name: courseschedule for 2023
+---
+```
 
 ## Organization
+The course will contain some assignments and seminars related to different methods.
+
 Teaching is in the form of lectures, assignments and seminars. The course contains 18 lectures, each will last for 2-4 hours. In the end of the course, there will have two lectures where students will need to present their assignments.
 
 ## Literature
@@ -70,32 +79,3 @@ Wei, W.W.S. (2006). Time series analysis Univariate and multivariate models, Sec
 
 ## Examination including compulsory elements
 The examination of the course consists of assignments and a final seminar.
-
-
-## Presentation -- Lecture 1
-
-<!-- 
-
-```{figure} https://github.com/wengangmao/fmms050/blob/main/contents/images/Lecture%201%20-%20Course%20contents.pdf
----
-height: 200px
-name: funding agencies
-alt: large funding agencies supporting our research
----
-```
-
-<object data="/images/lecture1-contents.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="/images/lecture1-contents.pdf">
-    </embed>
-</object>
-
-
--->
-
-
-<html>
-  <body>
-    <iframe src="/images/lecture1-contents.pdf#toolbar=0" width="100%" height="500px">
-    </iframe>
-  </body>
-</html>

@@ -14,7 +14,7 @@ name: project1
 ---
 ```
 
-* **You can access the pdf file of the assginment project through [project description](https://github.com/wengangmao/fmms050/blob/main/contents/assignment/PhD_FMMS050_projects_description.pdf)
+* **You can access the pdf file of the assginment project through [project description](https://github.com/wengangmao/fmms050/blob/main/contents/assignment/PhD_FMMS050_projects_description.pdf)**
 * **You can download [data-location1](https://data.mendeley.com/datasets/2stvkyngj9/2),[data-location2](https://chalmersuniversity.box.com/s/wsnew9tz6bj9yzbs86i967p6l93im6zm)**
 * **NB: you can also download the data from the Github repository**
 

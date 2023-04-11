@@ -30,22 +30,22 @@ parts:
   chapters:
   - file: contents/regression/interperations.md
     title: Lecture 2 -- Regression and interpretation
-  - file: contents/regression/tutorials/lecture2/examples.ipynb
-    title: Lecture 2 -- Examples
-  - file: contents/regression/tutorials/lecture2/excercise.ipynb
-    title: Lecture 2 -- Excercises
-    
-    
+    sections:
+    - file: contents/regression/tutorials/lecture2/examples.ipynb
+      title: Computer Examples
+    - file: contents/regression/tutorials/lecture2/excercise.ipynb
+      title: Computer Excercises
+      
+  - file: contents/regression/poly-spline.md
+    title: Lecture 3 -- Polynominal and spline fitting   
+    sections:
+    - file: contents/regression/tutorials/lecture2/examples.ipynb
+      title: Computer Examples
+    - file: contents/regression/tutorials/lecture2/excercise.ipynb
+      title: Computer Excercises    
     
   - file: contents/regression/reg-gradient.md
     title: Gradient for regression (parameter estimations)
-  - file: contents/regression/poly-spline.md
-    title: Polynominal and spline fitting   
-    sections:
-    - file: contents/regression/poly-spline_tutorial.md
-      title: Tutorial for polynominal/spline fitting
-    - file: contents/regression/poly-spline_codes.ipynb
-      title: Example codes for polynominal/spline fitting
   - file: contents/regression/glr.md
     title: Generalized linear regression
     sections:
