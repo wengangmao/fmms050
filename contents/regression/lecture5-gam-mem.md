@@ -20,4 +20,4 @@ name: lecture5
 ---
 ```
 
-**Please download the lecture through the following link [Lecture 5: Generalized Linear Models and Additive models](https://github.com/wengangmao/fmms050/blob/main/contents/regression/lectures/Lecture%202%20-%20Regression%20and%20interperation.pdf)**
+**Please download the lecture through the following link [Lecture 5: Generalized Linear Models and Additive models](https://github.com/wengangmao/fmms050/blob/main/contents/regression/lectures/Lecture%205%20-%20GLM%20GAM%20and%20Mixed-effects%20model.pdf)**

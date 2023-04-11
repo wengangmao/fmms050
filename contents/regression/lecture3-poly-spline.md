@@ -21,4 +21,4 @@ name: lecture2
 ---
 ```
 
-**Please download the lecture through the following link [Lecture 3: Polynomial and Spline Regression](https://github.com/wengangmao/fmms050/blob/main/contents/regression/lectures/Lecture%202%20-%20Regression%20and%20interperation.pdf)**
+**Please download the lecture through the following link [Lecture 3: Polynomial and Spline Regression](https://github.com/wengangmao/fmms050/blob/main/contents/regression/lectures/Lecture%203%20-%20Polynomial%20and%20Spline%20regression.pdf)**
