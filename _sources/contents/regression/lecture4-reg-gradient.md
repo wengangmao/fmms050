@@ -22,4 +22,4 @@ name: lecture4
 ---
 ```
 
-**Please download the lecture through the following link [Lecture 4: Model parameter estimation - gradient](https://github.com/wengangmao/fmms050/blob/main/contents/regression/lectures/Lecture%202%20-%20Regression%20and%20interperation.pdf)**
+**Please download the lecture through the following link [Lecture 4: Model parameter estimation - gradient](https://github.com/wengangmao/fmms050/blob/main/contents/regression/lectures/Lecture%204%20-%20Model%20parameter%20estimation%20-%20gradient.pdf)**
