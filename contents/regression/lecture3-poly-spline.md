@@ -8,9 +8,9 @@
 * Polynomial regression
 * Spline regression/fitting (different from interpolation)
 * Model estimation and evaluation of goodness
->- Cost/loss functions: penalties and regularization
->- Significant test and confidence interval (more complex model does not mean better model)
->- ANOVA, MSE and R2
+- Cost/loss functions: penalties and regularization
+- Significant test and confidence interval (more complex model does not mean better model)
+- ANOVA, MSE and R2
 * Advises when apply statistical and machine learning for modelling
 
 

@@ -34,8 +34,7 @@ parts:
     - file: contents/regression/tutorials/lecture2/examples.ipynb
       title: Computer Examples
     - file: contents/regression/tutorials/lecture2/excercise.ipynb
-      title: Computer Excercises
-      
+      title: Computer Excercises      
   - file: contents/regression/lecture3-poly-spline.md
     title: Lecture 3 -- Polynominal and spline fitting   
     sections:
@@ -43,7 +42,6 @@ parts:
       title: Computer Examples
     - file: contents/regression/tutorials/lecture3/excercise.ipynb
       title: Computer Excercises
-      
   - file: contents/regression/lecture4-reg-gradient.md
     title: Lecture 4 -- Model parameter estimation by gradient  
     sections:
@@ -51,7 +49,6 @@ parts:
       title: Computer Examples
     - file: contents/regression/tutorials/lecture4/excercise.ipynb
       title: Computer Excercises
-      
   - file: contents/regression/lecture5-gam-mem.md
     title: Lecture 5 -- GLM GAM and Mixed-effects model
     sections:
