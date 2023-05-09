@@ -4,13 +4,12 @@ root: contents/introduction
 parts:
 - caption: PART 1 -- MACHINE LEARNING FOR ENGINEERING APPLICATIONS
   chapters:
-  - file:  contents/ml-engineering/intro_applications.md
-    title: Lecture 1 -- AI/ML terminologies
   - file:  contents/ml-engineering/ml-types.md
     title: Types of machine learning methods
   - file:  contents/ml-engineering/basic-math.md
     title: Basic mathematics for machine learning
-
+  - file:  contents/ml-engineering/intro_applications.md
+    title: Lecture 1 -- AI/ML terminologies
 
 #- caption: DATA FILTERING METHODS
 #  chapters:
@@ -60,46 +59,56 @@ parts:
       
 - caption: PART 3 -- MACHINE LEARNING METHODS
   chapters:
-  - file: contents/machine-learning/logistic.md
+  - file: contents/machine-learning/l06_logistic.md
     title: Lecture 6 -- Logistical regression and classification
     sections:
     - file: contents/machine-learning/tutorials/lecture6/examples.ipynb
       title: Computer Examples
     - file: contents/machine-learning/tutorials/lecture6/exercise.ipynb
       title: Computer Excercises
-  - file: contents/machine-learning/trees.md
+  - file: contents/machine-learning/l07_trees.md
     title: Lecture 7 -- Decision trees and ensemble algorithm
     sections:
     - file: contents/machine-learning/tutorials/lecture7/examples.ipynb
       title: Computer Examples
     - file: contents/machine-learning/tutorials/lecture7/exercise.ipynb
       title: Computer Excercises
-  - file: contents/machine-learning/boost.md
+  - file: contents/machine-learning/l08_boost.md
     title: Lecture 8 -- Boosting methods (XGBoost)
     sections:
     - file: contents/machine-learning/tutorials/lecture8/examples.ipynb
       title: Computer Examples
     - file: contents/machine-learning/tutorials/lecture8/exercise.ipynb
       title: Computer Excercises
-  - file: contents/machine-learning/svm.md
+  - file: contents/machine-learning/l09_svm.md
     title: Lecture 9 -- Support vector machine
-  - file: contents/machine-learning/ann.md
+  - file: contents/machine-learning/l10_ann.md
     title: Lecture 10 -- Artificial neural network
 
 
     
 - caption: PART 4 -- TIME SERIES LEARNING METHODS
   chapters:
-  - file: contents/time-series/gaussian-transform.md
-    title: Gaussian transformation methods
-  - file: contents/time-series/stationary-gaussian.md
-    title: Basic properties of stationary Gaussian process
-  - file: contents/time-series/acf.md
-    title: Autocorrelation and Conditional expectation
-  - file: contents/time-series/ar-ma.md
-    title: Auto regressive models and Moving average models
-  - file: contents/time-series/arima.md
-    title: ARIMA models
+  - file: contents/time-series/l11_gaussian-transform.md
+    title: Lecture 11 -- Gaussian transformation methods
+    sections:
+    - file: contents/time-series/tutorials/lecture11/examples.ipynb
+      title: Computer Examples
+    - file: contents/time-series/tutorials/lecture11/exercise.ipynb
+      title: Computer Excercises    
+  - file: contents/time-series/l12_stationary-gaussian.md
+    title:  Lecture 12 -- Basic properties of stationary Gaussian process
+  - file: contents/time-series/l13_timeseriesmodel.md
+    title:  Lecture 13 -- Time series analysis and model exploration
+  - file: contents/time-series/l14_ar-ma1.md
+    title:  Lecture 14 -- Auto regressive models and Moving average models (1)
+    sections:
+    - file: contents/time-series/tutorials/lecture14/examples.ipynb
+      title: Computer Examples     
+  - file: contents/time-series/l15_ar-ma2.md
+    title:  Lecture 15 -- Auto regressive models and Moving average models (2)
+  - file: contents/time-series/l16_arima.md
+    title:  Lecture 16 -- ARIMA models
     
 - caption: PROJECT ASSIGNMENT
   chapters:
