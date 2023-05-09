@@ -23,7 +23,7 @@ parts:
 #    sections:
 #     - file: contents/data-filter/kalmar_tutorial.md
 #       title: Tutorial of Kalmar filter methods    
-#     - file: contents/data-filter/kalmar_codes.ipynb
+#     - file: contents/data-filter/kalmar_codes.md
 #       title: Example codes for Kalmar filter methods
 
 - caption: PART 2 -- STATISTICAL REGRESSION
@@ -61,15 +61,32 @@ parts:
 - caption: PART 3 -- MACHINE LEARNING METHODS
   chapters:
   - file: contents/machine-learning/logistic.md
-    title: Logistical regression and classification
-  - file: contents/machine-learning/ann.md
-    title: Artificial neural network
-  - file: contents/machine-learning/svm.md
-    title: Support vector machine
+    title: Lecture 6 -- Logistical regression and classification
+    sections:
+    - file: contents/machine-learning/tutorials/lecture6/examples.ipynb
+      title: Computer Examples
+    - file: contents/machine-learning/tutorials/lecture6/exercise.ipynb
+      title: Computer Excercises
   - file: contents/machine-learning/trees.md
-    title: Decision trees and ensemble algorithm
+    title: Lecture 7 -- Decision trees and ensemble algorithm
+    sections:
+    - file: contents/machine-learning/tutorials/lecture7/examples.ipynb
+      title: Computer Examples
+    - file: contents/machine-learning/tutorials/lecture7/exercise.ipynb
+      title: Computer Excercises
   - file: contents/machine-learning/boost.md
-    title: Boosting methods (XGBoost)
+    title: Lecture 8 -- Boosting methods (XGBoost)
+    sections:
+    - file: contents/machine-learning/tutorials/lecture8/examples.ipynb
+      title: Computer Examples
+    - file: contents/machine-learning/tutorials/lecture8/exercise.ipynb
+      title: Computer Excercises
+  - file: contents/machine-learning/svm.md
+    title: Lecture 9 -- Support vector machine
+  - file: contents/machine-learning/ann.md
+    title: Lecture 10 -- Artificial neural network
+
+
     
 - caption: PART 4 -- TIME SERIES LEARNING METHODS
   chapters:
