@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Computer Examples &#8212; ML for engineering mechanics</title>
+    <title>Lecture 3 : Polynominal and spline fitting examples &#8212; ML for engineering mechanics</title>
   
   
   
@@ -174,9 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../lecture3-poly-spline.html">Lecture 3 -- Polynominal and spline fitting</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Computer Examples</strong></a></li>
-
-
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Lecture 3 : Polynominal and spline fitting examples</strong></a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="excercise.html">Computer Excercises</a></li>
 </ul>
@@ -196,11 +194,20 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PART 3 -- MACHINE LEARNING METHODS</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../../machine-learning/logistic.html">Logistical regression and classification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../machine-learning/ann.html">Artificial neural network</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../machine-learning/svm.html">Support vector machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../machine-learning/trees.html">Decision trees and ensemble algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../machine-learning/boost.html">Boosting methods (XGBoost)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../machine-learning/logistic.html">Lecture 6 -- Logistical regression and classification</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../machine-learning/tutorials/lecture6/examples.html">Computer Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../machine-learning/tutorials/lecture6/exercise.html"><strong>Lecture 6 – exercises -logistical regression</strong></a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../machine-learning/trees.html">Lecture 7 -- Decision trees and ensemble algorithm</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../machine-learning/boost.html">Lecture 8 -- Boosting methods (XGBoost)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../machine-learning/svm.html">Lecture 9 -- Support vector machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../machine-learning/ann.html">Lecture 10 -- Artificial neural network</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PART 4 -- TIME SERIES LEARNING METHODS</span></p>
 <ul class="nav bd-sidenav">
@@ -444,7 +451,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Computer Examples</h1>
+    <h1>Lecture 3 : Polynominal and spline fitting examples</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -454,13 +461,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Computer Examples</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-3-polynominal-and-spline-fitting-examples"><strong>Lecture 3 : Polynominal and spline fitting examples</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-polynominal-regression"><strong>Part I</strong>: Polynominal regression</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-feature-polynominal-regression"><em><strong>1.1, single feature polynominal regression</strong></em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-the-ploynominal-regression-y-a-1-times-x-n-a-2-times-x-n-1-two-questions-related-to-the-polynominal-regression">For the ploynominal regression <span class="math notranslate nohighlight">\(Y = a_1 \times X^n + a_2 \times X^{n-1} + ...\)</span>. two questions related to the polynominal regression</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-features-polynominal-regression"><em><strong>1.2, multiple features polynominal regression</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nb-in-the-following-we-will-use-the-pandas-dataframe-to-handle-the-data-structure">NB: in the following, we will use the pandas dataframe to handle the data structure</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lecture 3 : Polynominal and spline fitting examples</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-polynominal-regression"><strong>Part I</strong>: Polynominal regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-feature-polynominal-regression"><em><strong>1.1, single feature polynominal regression</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-the-ploynominal-regression-y-a-1-times-x-n-a-2-times-x-n-1-two-questions-related-to-the-polynominal-regression">For the ploynominal regression <span class="math notranslate nohighlight">\(Y = a_1 \times X^n + a_2 \times X^{n-1} + ...\)</span>. two questions related to the polynominal regression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-features-polynominal-regression"><em><strong>1.2, multiple features polynominal regression</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nb-in-the-following-we-will-use-the-pandas-dataframe-to-handle-the-data-structure">NB: in the following, we will use the pandas dataframe to handle the data structure</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -483,10 +491,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="computer-examples">
-<h1><strong>Computer Examples</strong><a class="headerlink" href="#computer-examples" title="Permalink to this heading">#</a></h1>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="lecture-3-polynominal-and-spline-fitting-examples">
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-3-polynominal-and-spline-fitting-examples">
 <h1><strong>Lecture 3 : Polynominal and spline fitting examples</strong><a class="headerlink" href="#lecture-3-polynominal-and-spline-fitting-examples" title="Permalink to this heading">#</a></h1>
 <blockquote>
 <div><ul class="simple">
@@ -495,9 +500,8 @@ document.write(`
 <li><p><strong>Goodness of fit</strong></p></li>
 </ul>
 </div></blockquote>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="part-i-polynominal-regression">
-<h1><strong>Part I</strong>: Polynominal regression<a class="headerlink" href="#part-i-polynominal-regression" title="Permalink to this heading">#</a></h1>
+<section id="part-i-polynominal-regression">
+<h2><strong>Part I</strong>: Polynominal regression<a class="headerlink" href="#part-i-polynominal-regression" title="Permalink to this heading">#</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p>NB: a polynominal regression can container multiple features (independent variables)</p></li>
@@ -510,7 +514,7 @@ document.write(`
 </ul>
 </div></blockquote>
 <section id="single-feature-polynominal-regression">
-<h2><em><strong>1.1, single feature polynominal regression</strong></em><a class="headerlink" href="#single-feature-polynominal-regression" title="Permalink to this heading">#</a></h2>
+<h3><em><strong>1.1, single feature polynominal regression</strong></em><a class="headerlink" href="#single-feature-polynominal-regression" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all the necessary python libraries</span>
@@ -542,7 +546,7 @@ document.write(`
 </div>
 </section>
 <section id="for-the-ploynominal-regression-y-a-1-times-x-n-a-2-times-x-n-1-two-questions-related-to-the-polynominal-regression">
-<h2>For the ploynominal regression <span class="math notranslate nohighlight">\(Y = a_1 \times X^n + a_2 \times X^{n-1} + ...\)</span>. two questions related to the polynominal regression<a class="headerlink" href="#for-the-ploynominal-regression-y-a-1-times-x-n-a-2-times-x-n-1-two-questions-related-to-the-polynominal-regression" title="Permalink to this heading">#</a></h2>
+<h3>For the ploynominal regression <span class="math notranslate nohighlight">\(Y = a_1 \times X^n + a_2 \times X^{n-1} + ...\)</span>. two questions related to the polynominal regression<a class="headerlink" href="#for-the-ploynominal-regression-y-a-1-times-x-n-a-2-times-x-n-1-two-questions-related-to-the-polynominal-regression" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>How do we establish the degree of our polynomial <span class="math notranslate nohighlight">\(n\)</span>?</p></li>
@@ -585,7 +589,7 @@ document.write(`
 </div>
 </section>
 <section id="multiple-features-polynominal-regression">
-<h2><em><strong>1.2, multiple features polynominal regression</strong></em><a class="headerlink" href="#multiple-features-polynominal-regression" title="Permalink to this heading">#</a></h2>
+<h3><em><strong>1.2, multiple features polynominal regression</strong></em><a class="headerlink" href="#multiple-features-polynominal-regression" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, generate random data samples</span>
@@ -614,7 +618,7 @@ document.write(`
 </div>
 </div>
 <section id="nb-in-the-following-we-will-use-the-pandas-dataframe-to-handle-the-data-structure">
-<h3>NB: in the following, we will use the pandas dataframe to handle the data structure<a class="headerlink" href="#nb-in-the-following-we-will-use-the-pandas-dataframe-to-handle-the-data-structure" title="Permalink to this heading">#</a></h3>
+<h4>NB: in the following, we will use the pandas dataframe to handle the data structure<a class="headerlink" href="#nb-in-the-following-we-will-use-the-pandas-dataframe-to-handle-the-data-structure" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># STEP1: store the data in pd.dataframe</span>
@@ -772,6 +776,7 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -1035,13 +1040,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Computer Examples</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-3-polynominal-and-spline-fitting-examples"><strong>Lecture 3 : Polynominal and spline fitting examples</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-polynominal-regression"><strong>Part I</strong>: Polynominal regression</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-feature-polynominal-regression"><em><strong>1.1, single feature polynominal regression</strong></em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-the-ploynominal-regression-y-a-1-times-x-n-a-2-times-x-n-1-two-questions-related-to-the-polynominal-regression">For the ploynominal regression <span class="math notranslate nohighlight">\(Y = a_1 \times X^n + a_2 \times X^{n-1} + ...\)</span>. two questions related to the polynominal regression</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-features-polynominal-regression"><em><strong>1.2, multiple features polynominal regression</strong></em></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nb-in-the-following-we-will-use-the-pandas-dataframe-to-handle-the-data-structure">NB: in the following, we will use the pandas dataframe to handle the data structure</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lecture 3 : Polynominal and spline fitting examples</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-polynominal-regression"><strong>Part I</strong>: Polynominal regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-feature-polynominal-regression"><em><strong>1.1, single feature polynominal regression</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-the-ploynominal-regression-y-a-1-times-x-n-a-2-times-x-n-1-two-questions-related-to-the-polynominal-regression">For the ploynominal regression <span class="math notranslate nohighlight">\(Y = a_1 \times X^n + a_2 \times X^{n-1} + ...\)</span>. two questions related to the polynominal regression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-features-polynominal-regression"><em><strong>1.2, multiple features polynominal regression</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nb-in-the-following-we-will-use-the-pandas-dataframe-to-handle-the-data-structure">NB: in the following, we will use the pandas dataframe to handle the data structure</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
