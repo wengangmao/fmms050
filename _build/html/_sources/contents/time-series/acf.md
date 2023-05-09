@@ -1,4 +1,0 @@
-# Autocorrelation and Conditional expectation
-
-+++
----
