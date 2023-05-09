@@ -185,8 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../lecture5-gam-mem.html">Lecture 5 -- GLM GAM and Mixed-effects model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="examples.html">Computer Examples</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Lecture 5: Excercise</strong></a></li>
-
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Computer Excercises</a></li>
 </ul>
 </li>
 </ul>
@@ -458,16 +457,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lecture 5: Excercise</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tweedie-regression-on-insurance-claims">Tweedie regression on insurance claims</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-datasets-basic-feature-extraction-and-target-definitions">Loading datasets, basic feature extraction and target definitions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-model-poisson-distribution">Frequency model – Poisson distribution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#severity-model-gamma-distribution">Severity Model -  Gamma distribution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pure-premium-modeling-via-a-product-model-vs-single-tweedieregressor">Pure Premium Modeling via a Product Model vs single TweedieRegressor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tweedie-regression-on-insurance-claims">1, Tweedie regression on insurance claims</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-datasets-basic-feature-extraction-and-target-definitions">2, Loading datasets, basic feature extraction and target definitions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-model-poisson-distribution">3, Frequency model – Poisson distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#severity-model-gamma-distribution">4, Severity Model -  Gamma distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pure-premium-modeling-via-a-product-model-vs-single-tweedieregressor">5, Pure Premium Modeling via a Product Model vs single TweedieRegressor</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -487,9 +482,8 @@ document.write(`
 <li><p>2, Write a brief summary of this project</p></li>
 </ul>
 </div></blockquote>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="tweedie-regression-on-insurance-claims">
-<h1>Tweedie regression on insurance claims<a class="headerlink" href="#tweedie-regression-on-insurance-claims" title="Permalink to this heading">#</a></h1>
+<section id="tweedie-regression-on-insurance-claims">
+<h2>1, Tweedie regression on insurance claims<a class="headerlink" href="#tweedie-regression-on-insurance-claims" title="Permalink to this heading">#</a></h2>
 <p>This example illustrates the use of Poisson, Gamma and Tweedie regression on
 the <a class="reference external" href="https://www.openml.org/d/41214">French Motor Third-Party Liability Claims dataset</a>, and is inspired by an R tutorial [1]_.</p>
 <p>In this dataset, each sample corresponds to an insurance policy, i.e. a
@@ -686,8 +680,9 @@ Third-Party Liability Claims (November 8, 2018). <a class="reference external" h
 </div>
 </div>
 </div>
+</section>
 <section id="loading-datasets-basic-feature-extraction-and-target-definitions">
-<h2>Loading datasets, basic feature extraction and target definitions<a class="headerlink" href="#loading-datasets-basic-feature-extraction-and-target-definitions" title="Permalink to this heading">#</a></h2>
+<h2>2, Loading datasets, basic feature extraction and target definitions<a class="headerlink" href="#loading-datasets-basic-feature-extraction-and-target-definitions" title="Permalink to this heading">#</a></h2>
 <p>We construct the freMTPL2 dataset by joining the freMTPL2freq table,
 containing the number of claims (<code class="docutils literal notranslate"><span class="pre">ClaimNb</span></code>), with the freMTPL2sev table,
 containing the claim amount (<code class="docutils literal notranslate"><span class="pre">ClaimAmount</span></code>) for the same policy ids
@@ -780,7 +775,7 @@ IDpol
 </div>
 </section>
 <section id="frequency-model-poisson-distribution">
-<h2>Frequency model – Poisson distribution<a class="headerlink" href="#frequency-model-poisson-distribution" title="Permalink to this heading">#</a></h2>
+<h2>3, Frequency model – Poisson distribution<a class="headerlink" href="#frequency-model-poisson-distribution" title="Permalink to this heading">#</a></h2>
 <p>The number of claims (<code class="docutils literal notranslate"><span class="pre">ClaimNb</span></code>) is a positive integer (0 included).
 Thus, this target can be modelled by a Poisson distribution.
 It is then assumed to be the number of discrete events occurring with a
@@ -932,7 +927,7 @@ drivers younger than 30 years old, and is positively correlated with the
 behaviour.</p>
 </section>
 <section id="severity-model-gamma-distribution">
-<h2>Severity Model -  Gamma distribution<a class="headerlink" href="#severity-model-gamma-distribution" title="Permalink to this heading">#</a></h2>
+<h2>4, Severity Model -  Gamma distribution<a class="headerlink" href="#severity-model-gamma-distribution" title="Permalink to this heading">#</a></h2>
 <p>The mean claim amount or severity (<code class="docutils literal notranslate"><span class="pre">AvgClaimAmount</span></code>) can be empirically
 shown to follow approximately a Gamma distribution. We fit a GLM model for
 the severity with the same features as the frequency model.</p>
@@ -1102,7 +1097,7 @@ the drivers age (<code class="docutils literal notranslate"><span class="pre">Dr
 severity, both in observed and predicted data.</p>
 </section>
 <section id="pure-premium-modeling-via-a-product-model-vs-single-tweedieregressor">
-<h2>Pure Premium Modeling via a Product Model vs single TweedieRegressor<a class="headerlink" href="#pure-premium-modeling-via-a-product-model-vs-single-tweedieregressor" title="Permalink to this heading">#</a></h2>
+<h2>5, Pure Premium Modeling via a Product Model vs single TweedieRegressor<a class="headerlink" href="#pure-premium-modeling-via-a-product-model-vs-single-tweedieregressor" title="Permalink to this heading">#</a></h2>
 <p>As mentioned in the introduction, the total claim amount per unit of
 exposure can be modeled as the product of the prediction of the
 frequency model by the prediction of the severity model.</p>
@@ -1387,16 +1382,12 @@ of models, each with its own set of hyperparameters.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lecture 5: Excercise</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tweedie-regression-on-insurance-claims">Tweedie regression on insurance claims</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-datasets-basic-feature-extraction-and-target-definitions">Loading datasets, basic feature extraction and target definitions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-model-poisson-distribution">Frequency model – Poisson distribution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#severity-model-gamma-distribution">Severity Model -  Gamma distribution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pure-premium-modeling-via-a-product-model-vs-single-tweedieregressor">Pure Premium Modeling via a Product Model vs single TweedieRegressor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tweedie-regression-on-insurance-claims">1, Tweedie regression on insurance claims</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-datasets-basic-feature-extraction-and-target-definitions">2, Loading datasets, basic feature extraction and target definitions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-model-poisson-distribution">3, Frequency model – Poisson distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#severity-model-gamma-distribution">4, Severity Model -  Gamma distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pure-premium-modeling-via-a-product-model-vs-single-tweedieregressor">5, Pure Premium Modeling via a Product Model vs single TweedieRegressor</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
