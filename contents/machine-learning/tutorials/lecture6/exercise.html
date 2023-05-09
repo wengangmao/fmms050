@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 6 – exercises -logistical regression &#8212; ML for engineering mechanics</title>
+    <title>Lecture 6 Exercises – logistical regression &#8212; ML for engineering mechanics</title>
   
   
   
@@ -172,14 +172,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../regression/lecture3-poly-spline.html">Lecture 3 -- Polynominal and spline fitting</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../regression/tutorials/lecture3/examples.html"><strong>Lecture 3 : Polynominal and spline fitting examples</strong></a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../../../regression/tutorials/lecture3/examples.html">Computer Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../regression/tutorials/lecture3/excercise.html">Computer Excercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../regression/lecture4-reg-gradient.html">Lecture 4 -- Model parameter estimation by gradient</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../regression/tutorials/lecture4/examples.html"><strong>Lecture 4 example: Gradient method for parameter estimation</strong></a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../../../regression/tutorials/lecture4/examples.html">Computer Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../regression/tutorials/lecture4/excercise.html">Computer Excercises</a></li>
 </ul>
 </li>
@@ -194,8 +192,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../logistic.html">Lecture 6 -- Logistical regression and classification</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="examples.html">Computer Examples</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Lecture 6 – exercises -logistical regression</strong></a></li>
-
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Computer Excercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../trees.html">Lecture 7 -- Decision trees and ensemble algorithm</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
@@ -449,7 +446,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 6 – exercises -logistical regression</h1>
+    <h1>Lecture 6 Exercises – logistical regression</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -459,9 +456,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lecture 6 – exercises -logistical regression</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-dataset">1， Download the dataset</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#show-the-images-and-lables">2, Show the images and lables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#show-the-images-and-labels">2, Show the images and labels</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-the-dataset-train-and-test">3, Preprocessing the dataset: train and test</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-prepare-4-steps-for-the-regression">4, We prepare 4 steps for the  regression</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-model">4.1, Import the model</a></li>
@@ -470,24 +466,21 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-labels-for-new-data-new-images">4.4, Predict labels for new data (new images)</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-working-on-the-real-ditial-dataset">PART II: working on the real ditial dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-download-the-mnist-dataset">II.1, Download the MNIST dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-split-the-dataset-into-training-and-testing">II.2, split the dataset into training and testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-show-the-images-and-lables-of-the-mnist-data">II.3  show the images and lables of the MNIST data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-4-four-step-modelling-by-sklearn">II.4, Four-step modelling by sklearn</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-ml-regression-model">4.1, Import the ML/Regression model</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#make-an-instance-of-the-chosen-model">4.2, make an instance of the chosen model</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#train-the-model-from-the-training-dataset">4.3, train the model from the training dataset</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-the-labels-of-new-data-new-images">4.4, Predict the labels of new data (new images)</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-working-on-the-real-ditial-dataset">PART II: working on the real ditial dataset</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-download-the-mnist-dataset">II.1, Download the MNIST dataset</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-split-the-dataset-into-training-and-testing">II.2, split the dataset into training and testing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-show-the-images-and-lables-of-the-mnist-data">II.3  show the images and lables of the MNIST data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-4-four-step-modelling-by-sklearn">II.4, Four-step modelling by sklearn</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-ml-regression-model">4.1, Import the ML/Regression model</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-an-instance-of-the-chosen-model">4.2, make an instance of the chosen model</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-the-model-from-the-training-dataset">4.3, train the model from the training dataset</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-the-labels-of-new-data-new-images">4.4, Predict the labels of new data (new images)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-5-measuring-model-performance-mnist">II.5, Measuring Model Performance (MNIST)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-5-measuring-model-performance-mnist">II.5, Measuring Model Performance (MNIST)</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -499,7 +492,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-6-exercises-logistical-regression">
-<h1><strong>Lecture 6 – exercises -logistical regression</strong><a class="headerlink" href="#lecture-6-exercises-logistical-regression" title="Permalink to this heading">#</a></h1>
+<h1><strong>Lecture 6 Exercises – logistical regression</strong><a class="headerlink" href="#lecture-6-exercises-logistical-regression" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p><strong>Understand the code</strong></p></li>
 <li><p><strong>Write a short report</strong></p></li>
@@ -526,8 +519,8 @@ Label Data Shape (1797,)
 </div>
 </div>
 </section>
-<section id="show-the-images-and-lables">
-<h2>2, Show the images and lables<a class="headerlink" href="#show-the-images-and-lables" title="Permalink to this heading">#</a></h2>
+<section id="show-the-images-and-labels">
+<h2>2, Show the images and labels<a class="headerlink" href="#show-the-images-and-labels" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
@@ -705,9 +698,8 @@ Please also refer to the documentation for alternative solver options:
 </div>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="part-ii-working-on-the-real-ditial-dataset">
-<h1>PART II: working on the real ditial dataset<a class="headerlink" href="#part-ii-working-on-the-real-ditial-dataset" title="Permalink to this heading">#</a></h1>
+<section id="part-ii-working-on-the-real-ditial-dataset">
+<h2>PART II: working on the real ditial dataset<a class="headerlink" href="#part-ii-working-on-the-real-ditial-dataset" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -719,7 +711,7 @@ Please also refer to the documentation for alternative solver options:
 </div>
 </div>
 <section id="ii-1-download-the-mnist-dataset">
-<h2>II.1, Download the MNIST dataset<a class="headerlink" href="#ii-1-download-the-mnist-dataset" title="Permalink to this heading">#</a></h2>
+<h3>II.1, Download the MNIST dataset<a class="headerlink" href="#ii-1-download-the-mnist-dataset" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_openml</span>
@@ -742,7 +734,7 @@ Please also refer to the documentation for alternative solver options:
 </div>
 </section>
 <section id="ii-2-split-the-dataset-into-training-and-testing">
-<h2>II.2, split the dataset into training and testing<a class="headerlink" href="#ii-2-split-the-dataset-into-training-and-testing" title="Permalink to this heading">#</a></h2>
+<h3>II.2, split the dataset into training and testing<a class="headerlink" href="#ii-2-split-the-dataset-into-training-and-testing" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -753,7 +745,7 @@ Please also refer to the documentation for alternative solver options:
 </div>
 </section>
 <section id="ii-3-show-the-images-and-lables-of-the-mnist-data">
-<h2>II.3  show the images and lables of the MNIST data<a class="headerlink" href="#ii-3-show-the-images-and-lables-of-the-mnist-data" title="Permalink to this heading">#</a></h2>
+<h3>II.3  show the images and lables of the MNIST data<a class="headerlink" href="#ii-3-show-the-images-and-lables-of-the-mnist-data" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_lbl</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
@@ -789,9 +781,9 @@ Categories (10, object): [&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, ..
 </div>
 </section>
 <section id="ii-4-four-step-modelling-by-sklearn">
-<h2>II.4, Four-step modelling by sklearn<a class="headerlink" href="#ii-4-four-step-modelling-by-sklearn" title="Permalink to this heading">#</a></h2>
+<h3>II.4, Four-step modelling by sklearn<a class="headerlink" href="#ii-4-four-step-modelling-by-sklearn" title="Permalink to this heading">#</a></h3>
 <section id="import-the-ml-regression-model">
-<h3>4.1, Import the ML/Regression model<a class="headerlink" href="#import-the-ml-regression-model" title="Permalink to this heading">#</a></h3>
+<h4>4.1, Import the ML/Regression model<a class="headerlink" href="#import-the-ml-regression-model" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
@@ -801,7 +793,7 @@ Categories (10, object): [&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, ..
 </div>
 </section>
 <section id="make-an-instance-of-the-chosen-model">
-<h3>4.2, make an instance of the chosen model<a class="headerlink" href="#make-an-instance-of-the-chosen-model" title="Permalink to this heading">#</a></h3>
+<h4>4.2, make an instance of the chosen model<a class="headerlink" href="#make-an-instance-of-the-chosen-model" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># all parameters not specified are set to their defaults</span>
@@ -815,7 +807,7 @@ Categories (10, object): [&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, ..
 </div>
 </section>
 <section id="train-the-model-from-the-training-dataset">
-<h3>4.3, train the model from the training dataset<a class="headerlink" href="#train-the-model-from-the-training-dataset" title="Permalink to this heading">#</a></h3>
+<h4>4.3, train the model from the training dataset<a class="headerlink" href="#train-the-model-from-the-training-dataset" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">logisticRegr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_img</span><span class="p">,</span> <span class="n">train_lbl</span><span class="p">)</span>
@@ -827,7 +819,7 @@ Categories (10, object): [&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, ..
 </div>
 </section>
 <section id="predict-the-labels-of-new-data-new-images">
-<h3>4.4, Predict the labels of new data (new images)<a class="headerlink" href="#predict-the-labels-of-new-data-new-images" title="Permalink to this heading">#</a></h3>
+<h4>4.4, Predict the labels of new data (new images)<a class="headerlink" href="#predict-the-labels-of-new-data-new-images" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Returns a NumPy Array</span>
@@ -866,7 +858,7 @@ Categories (10, object): [&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, ..
 </section>
 </section>
 <section id="ii-5-measuring-model-performance-mnist">
-<h2>II.5, Measuring Model Performance (MNIST)<a class="headerlink" href="#ii-5-measuring-model-performance-mnist" title="Permalink to this heading">#</a></h2>
+<h3>II.5, Measuring Model Performance (MNIST)<a class="headerlink" href="#ii-5-measuring-model-performance-mnist" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">score</span> <span class="o">=</span> <span class="n">logisticRegr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">test_img</span><span class="p">,</span> <span class="n">test_lbl</span><span class="p">)</span>
@@ -905,6 +897,7 @@ Categories (10, object): [&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, ..
 <img alt="../../../../_images/ad854052c6f3207b3999eff87d322b623935eee1de203f99fd918f82c7db14f1.png" src="../../../../_images/ad854052c6f3207b3999eff87d322b623935eee1de203f99fd918f82c7db14f1.png" />
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -975,9 +968,8 @@ Categories (10, object): [&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, ..
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lecture 6 – exercises -logistical regression</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-dataset">1， Download the dataset</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#show-the-images-and-lables">2, Show the images and lables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#show-the-images-and-labels">2, Show the images and labels</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-the-dataset-train-and-test">3, Preprocessing the dataset: train and test</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-prepare-4-steps-for-the-regression">4, We prepare 4 steps for the  regression</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-model">4.1, Import the model</a></li>
@@ -986,24 +978,21 @@ Categories (10, object): [&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, ..
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-labels-for-new-data-new-images">4.4, Predict labels for new data (new images)</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-working-on-the-real-ditial-dataset">PART II: working on the real ditial dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-download-the-mnist-dataset">II.1, Download the MNIST dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-split-the-dataset-into-training-and-testing">II.2, split the dataset into training and testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-show-the-images-and-lables-of-the-mnist-data">II.3  show the images and lables of the MNIST data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-4-four-step-modelling-by-sklearn">II.4, Four-step modelling by sklearn</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-ml-regression-model">4.1, Import the ML/Regression model</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#make-an-instance-of-the-chosen-model">4.2, make an instance of the chosen model</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#train-the-model-from-the-training-dataset">4.3, train the model from the training dataset</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-the-labels-of-new-data-new-images">4.4, Predict the labels of new data (new images)</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-working-on-the-real-ditial-dataset">PART II: working on the real ditial dataset</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-download-the-mnist-dataset">II.1, Download the MNIST dataset</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-split-the-dataset-into-training-and-testing">II.2, split the dataset into training and testing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-show-the-images-and-lables-of-the-mnist-data">II.3  show the images and lables of the MNIST data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-4-four-step-modelling-by-sklearn">II.4, Four-step modelling by sklearn</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-ml-regression-model">4.1, Import the ML/Regression model</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-an-instance-of-the-chosen-model">4.2, make an instance of the chosen model</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-the-model-from-the-training-dataset">4.3, train the model from the training dataset</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-the-labels-of-new-data-new-images">4.4, Predict the labels of new data (new images)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-5-measuring-model-performance-mnist">II.5, Measuring Model Performance (MNIST)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-5-measuring-model-performance-mnist">II.5, Measuring Model Performance (MNIST)</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>

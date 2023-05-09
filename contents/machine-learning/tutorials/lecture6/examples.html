@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../../_static/learning.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Lecture 6 – exercises -logistical regression" href="exercise.html" />
+    <link rel="next" title="Lecture 6 Exercises – logistical regression" href="exercise.html" />
     <link rel="prev" title="Logistical regression and classification" href="../../logistic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -172,14 +172,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../regression/lecture3-poly-spline.html">Lecture 3 -- Polynominal and spline fitting</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../regression/tutorials/lecture3/examples.html"><strong>Lecture 3 : Polynominal and spline fitting examples</strong></a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../../../regression/tutorials/lecture3/examples.html">Computer Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../regression/tutorials/lecture3/excercise.html">Computer Excercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../regression/lecture4-reg-gradient.html">Lecture 4 -- Model parameter estimation by gradient</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../regression/tutorials/lecture4/examples.html"><strong>Lecture 4 example: Gradient method for parameter estimation</strong></a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../../../regression/tutorials/lecture4/examples.html">Computer Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../regression/tutorials/lecture4/excercise.html">Computer Excercises</a></li>
 </ul>
 </li>
@@ -194,8 +192,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../logistic.html">Lecture 6 -- Logistical regression and classification</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Computer Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercise.html"><strong>Lecture 6 – exercises -logistical regression</strong></a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="exercise.html">Computer Excercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../trees.html">Lecture 7 -- Decision trees and ensemble algorithm</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
@@ -459,7 +456,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-problems-related-to-logistical-regression-demonstrated">Two problems related to Logistical regression demonstrated</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-logistic-classification"><strong>Part I: logistic classification</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-some-data-to-play-with">1.1, Import some data to play with</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-an-instance-of-logistic-regression-classifier-and-fit-the-data">1.2, Create an instance of Logistic Regression Classifier and fit the data.</a></li>
@@ -468,10 +464,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-logistic-regression"><strong>Part II: logistic regression</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-explanation-case-numbers-connected-to-logistics">2.1, a simple explanation case: numbers connected to logistics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bit-more-complex-case-use-sklearn-from-scikit-website">2.2, A bit more complex case use sklearn from scikit website</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiclass-sparse-logistic-regression-on-20newgroups">Multiclass sparse logistic regression on 20newgroups</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bit-more-complex-case-use-sklearn-from-scikit-website">2.2, A bit more complex case use sklearn from scikit website</a></li>
 </ul>
 </li>
 </ul>
@@ -487,13 +480,11 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-6-examples-for-logistical-regression">
 <h1><strong>Lecture 6: Examples for logistical Regression</strong><a class="headerlink" href="#lecture-6-examples-for-logistical-regression" title="Permalink to this heading">#</a></h1>
-<section id="two-problems-related-to-logistical-regression-demonstrated">
-<h2>Two problems related to Logistical regression demonstrated<a class="headerlink" href="#two-problems-related-to-logistical-regression-demonstrated" title="Permalink to this heading">#</a></h2>
+<p><strong>Two problems related to Logistical regression demonstrated</strong></p>
 <ul class="simple">
 <li><p>Logistical classifier</p></li>
 <li><p>Logistical regression</p></li>
 </ul>
-</section>
 <section id="part-i-logistic-classification">
 <h2><strong>Part I: logistic classification</strong><a class="headerlink" href="#part-i-logistic-classification" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -653,20 +644,21 @@ document.write(`
 </section>
 <section id="a-bit-more-complex-case-use-sklearn-from-scikit-website">
 <h3>2.2, A bit more complex case use sklearn from scikit website<a class="headerlink" href="#a-bit-more-complex-case-use-sklearn-from-scikit-website" title="Permalink to this heading">#</a></h3>
-<section id="multiclass-sparse-logistic-regression-on-20newgroups">
-<h4>Multiclass sparse logistic regression on 20newgroups<a class="headerlink" href="#multiclass-sparse-logistic-regression-on-20newgroups" title="Permalink to this heading">#</a></h4>
-<p>Comparison of multinomial logistic L1 vs one-versus-rest L1 logistic regression
+<p><strong>Multiclass sparse logistic regression on 20newgroups</strong></p>
+<ul class="simple">
+<li><p>Comparison of multinomial logistic L1 vs one-versus-rest L1 logistic regression
 to classify documents from the newgroups20 dataset. Multinomial logistic
 regression yields more accurate results and is faster to train on the larger
-scale dataset.</p>
-<p>Here we use the l1 sparsity that trims the weights of not informative
+scale dataset.</p></li>
+<li><p>Here we use the l1 sparsity that trims the weights of not informative
 features to zero. This is good if the goal is to extract the strongly
 discriminative vocabulary of each class. If the goal is to get the best
 predictive accuracy, it is better to use the non sparsity-inducing l2 penalty
-instead.</p>
-<p>A more traditional (and possibly better) way to predict on a sparse subset of
+instead.</p></li>
+<li><p>A more traditional (and possibly better) way to predict on a sparse subset of
 input features would be to use univariate feature selection followed by a
-traditional (l2-penalised) logistic regression model.</p>
+traditional (l2-penalised) logistic regression model.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Arthur Mensch</span>
@@ -806,7 +798,6 @@ Example run in 103.000 s
 </section>
 </section>
 </section>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -853,7 +844,7 @@ Example run in 103.000 s
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Lecture 6 – exercises -logistical regression</strong></p>
+        <p class="prev-next-title"><strong>Lecture 6 Exercises – logistical regression</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -875,7 +866,6 @@ Example run in 103.000 s
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-problems-related-to-logistical-regression-demonstrated">Two problems related to Logistical regression demonstrated</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-logistic-classification"><strong>Part I: logistic classification</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-some-data-to-play-with">1.1, Import some data to play with</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-an-instance-of-logistic-regression-classifier-and-fit-the-data">1.2, Create an instance of Logistic Regression Classifier and fit the data.</a></li>
@@ -884,10 +874,7 @@ Example run in 103.000 s
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-logistic-regression"><strong>Part II: logistic regression</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-explanation-case-numbers-connected-to-logistics">2.1, a simple explanation case: numbers connected to logistics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bit-more-complex-case-use-sklearn-from-scikit-website">2.2, A bit more complex case use sklearn from scikit website</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiclass-sparse-logistic-regression-on-20newgroups">Multiclass sparse logistic regression on 20newgroups</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bit-more-complex-case-use-sklearn-from-scikit-website">2.2, A bit more complex case use sklearn from scikit website</a></li>
 </ul>
 </li>
 </ul>

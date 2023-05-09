@@ -174,14 +174,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../lecture3-poly-spline.html">Lecture 3 -- Polynominal and spline fitting</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Lecture 3 : Polynominal and spline fitting examples</strong></a></li>
-
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Computer Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="excercise.html">Computer Excercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../lecture4-reg-gradient.html">Lecture 4 -- Model parameter estimation by gradient</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../lecture4/examples.html"><strong>Lecture 4 example: Gradient method for parameter estimation</strong></a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../lecture4/examples.html">Computer Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lecture4/excercise.html">Computer Excercises</a></li>
 </ul>
 </li>
@@ -196,8 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../machine-learning/logistic.html">Lecture 6 -- Logistical regression and classification</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../machine-learning/tutorials/lecture6/examples.html">Computer Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../machine-learning/tutorials/lecture6/exercise.html"><strong>Lecture 6 – exercises -logistical regression</strong></a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../../../machine-learning/tutorials/lecture6/exercise.html">Computer Excercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../machine-learning/trees.html">Lecture 7 -- Decision trees and ensemble algorithm</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
@@ -461,7 +458,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lecture 3 : Polynominal and spline fitting examples</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-polynominal-regression"><strong>Part I</strong>: Polynominal regression</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-feature-polynominal-regression"><em><strong>1.1, single feature polynominal regression</strong></em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-the-ploynominal-regression-y-a-1-times-x-n-a-2-times-x-n-1-two-questions-related-to-the-polynominal-regression">For the ploynominal regression <span class="math notranslate nohighlight">\(Y = a_1 \times X^n + a_2 \times X^{n-1} + ...\)</span>. two questions related to the polynominal regression</a></li>
@@ -471,16 +467,13 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-spline-regression-interpolation-vs-polynominal-regression"><strong>Part II: SPLINE regression/interpolation vs Polynominal regression</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-we-start-to-regression-and-plot-the-results"><em><strong>Now we start to regression and plot the results</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finally-we-are-looking-at-another-different-splines-i-e-period-splines"><em><strong>Finally, we are looking at another different Splines, i.e., Period Splines</strong></em></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-spline-regression-interpolation-vs-polynominal-regression"><strong>Part II: SPLINE regression/interpolation vs Polynominal regression</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#now-we-start-to-regression-and-plot-the-results"><em><strong>Now we start to regression and plot the results</strong></em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finally-we-are-looking-at-another-different-splines-i-e-period-splines"><em><strong>Finally, we are looking at another different Splines, i.e., Period Splines</strong></em></a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -779,9 +772,8 @@ document.write(`
 </section>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="part-ii-spline-regression-interpolation-vs-polynominal-regression">
-<h1><strong>Part II: SPLINE regression/interpolation vs Polynominal regression</strong><a class="headerlink" href="#part-ii-spline-regression-interpolation-vs-polynominal-regression" title="Permalink to this heading">#</a></h1>
+<section id="part-ii-spline-regression-interpolation-vs-polynominal-regression">
+<h2><strong>Part II: SPLINE regression/interpolation vs Polynominal regression</strong><a class="headerlink" href="#part-ii-spline-regression-interpolation-vs-polynominal-regression" title="Permalink to this heading">#</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p>Due to special properties of SPLINE (cubic) curve along knots, SPLINE is more known as interpolation</p></li>
@@ -826,7 +818,7 @@ document.write(`
 </div>
 </div>
 <section id="now-we-start-to-regression-and-plot-the-results">
-<h2><em><strong>Now we start to regression and plot the results</strong></em><a class="headerlink" href="#now-we-start-to-regression-and-plot-the-results" title="Permalink to this heading">#</a></h2>
+<h3><em><strong>Now we start to regression and plot the results</strong></em><a class="headerlink" href="#now-we-start-to-regression-and-plot-the-results" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LR</span> <span class="o">=</span> <span class="n">PolynomialFeatures</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -880,7 +872,7 @@ document.write(`
 </div>
 </section>
 <section id="id1">
-<h2><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h3><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>This shows nicely that higher degree polynomials can fit the data better. But at the same time, too high powers can show unwanted oscillatory behaviour and are particularly dangerous for extrapolation beyond the range of fitted data. This is an advantage of B-splines. They usually fit the data as well as polynomials and show very nice and smooth behaviour. They have also good options to control the extrapolation, which defaults to continue with a constant.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -908,7 +900,7 @@ document.write(`
 </div>
 </section>
 <section id="finally-we-are-looking-at-another-different-splines-i-e-period-splines">
-<h2><em><strong>Finally, we are looking at another different Splines, i.e., Period Splines</strong></em><a class="headerlink" href="#finally-we-are-looking-at-another-different-splines-i-e-period-splines" title="Permalink to this heading">#</a></h2>
+<h3><em><strong>Finally, we are looking at another different Splines, i.e., Period Splines</strong></em><a class="headerlink" href="#finally-we-are-looking-at-another-different-splines-i-e-period-splines" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -970,6 +962,7 @@ document.write(`
 <img alt="../../../../_images/d92a58864b67c1ddd876eea1369c433c81415b8649341f2567a84528f0c68d55.png" src="../../../../_images/d92a58864b67c1ddd876eea1369c433c81415b8649341f2567a84528f0c68d55.png" />
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -1040,7 +1033,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lecture 3 : Polynominal and spline fitting examples</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-polynominal-regression"><strong>Part I</strong>: Polynominal regression</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-feature-polynominal-regression"><em><strong>1.1, single feature polynominal regression</strong></em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-the-ploynominal-regression-y-a-1-times-x-n-a-2-times-x-n-1-two-questions-related-to-the-polynominal-regression">For the ploynominal regression <span class="math notranslate nohighlight">\(Y = a_1 \times X^n + a_2 \times X^{n-1} + ...\)</span>. two questions related to the polynominal regression</a></li>
@@ -1050,16 +1042,13 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-spline-regression-interpolation-vs-polynominal-regression"><strong>Part II: SPLINE regression/interpolation vs Polynominal regression</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-we-start-to-regression-and-plot-the-results"><em><strong>Now we start to regression and plot the results</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finally-we-are-looking-at-another-different-splines-i-e-period-splines"><em><strong>Finally, we are looking at another different Splines, i.e., Period Splines</strong></em></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-spline-regression-interpolation-vs-polynominal-regression"><strong>Part II: SPLINE regression/interpolation vs Polynominal regression</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#now-we-start-to-regression-and-plot-the-results"><em><strong>Now we start to regression and plot the results</strong></em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finally-we-are-looking-at-another-different-splines-i-e-period-splines"><em><strong>Finally, we are looking at another different Splines, i.e., Period Splines</strong></em></a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
