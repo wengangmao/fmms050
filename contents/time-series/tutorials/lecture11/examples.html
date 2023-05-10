@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 11: Examples for Gaussian process &#8212; ML for engineering mechanics</title>
+    <title>Lecture 11 Examples – Gaussian process and regression &#8212; ML for engineering mechanics</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../../_static/learning.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Lecture 11: Excercises for Gaussian process" href="exercise.html" />
+    <link rel="next" title="Lecture 11 Excercises – Gaussian process and transformation" href="exercise.html" />
     <link rel="prev" title="Lecture 11 – Gaussian transformation methods" href="../../l11_gaussian-transform.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -208,11 +208,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PART 4 -- TIME SERIES LEARNING METHODS</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../l11_gaussian-transform.html">Lecture 11 -- Gaussian transformation methods</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Lecture 11: Examples for Gaussian process</strong></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="exercise.html"><strong>Lecture 11: Excercises for Gaussian process</strong></a></li>
-
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Computer Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise.html">Computer Excercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../l12_stationary-gaussian.html">Lecture 12 -- Basic properties of stationary Gaussian process</a></li>
@@ -459,7 +456,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 11: Examples for Gaussian process</h1>
+    <h1>Lecture 11 Examples – Gaussian process and regression</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -469,7 +466,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lecture 11: Examples for Gaussian process</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#five-different-paths-of-brownian-motions-random">Five different paths of Brownian motions (random)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-gaussian-process-is-defined-by-a-mean-and-covariance-function">A Gaussian process is defined by a mean and covariance function</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-exponentiated-quadratic">1, Define the exponentiated quadratic</a></li>
@@ -479,21 +475,18 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-2d-3d-gaussian-fields">5, Advanced 2D/3D Gaussian fields</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-gaussian-process-for-regression"><strong>Part II: Gaussian process for regression</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-gaussian-process-posterior">2.1, Define Gaussian process posterior</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-the-posterior-mean-and-covariance">2.2, Compute the posterior mean and covariance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-postior-distribution-and-some-samples">2.3, plot the postior distribution and some samples</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-gaussian-process-for-regression"><strong>Part II: Gaussian process for regression</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-gaussian-process-posterior">2.1, Define Gaussian process posterior</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-the-posterior-mean-and-covariance">2.2, Compute the posterior mean and covariance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-postior-distribution-and-some-samples">2.3, plot the postior distribution and some samples</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-iii-gaussian-process-for-regression-noisy-observations">Part III: Gaussian process for regression - Noisy observations</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-process-posterior-with-noisy-obeservations">3.1, Gaussian process posterior with noisy obeservations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.2, Plot the postior distribution and some samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-iii-gaussian-process-for-regression-noisy-observations">Part III: Gaussian process for regression - Noisy observations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-process-posterior-with-noisy-obeservations">3.1, Gaussian process posterior with noisy obeservations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.2, Plot the postior distribution and some samples</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -504,8 +497,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-11-examples-for-gaussian-process">
-<h1><strong>Lecture 11: Examples for Gaussian process</strong><a class="headerlink" href="#lecture-11-examples-for-gaussian-process" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-11-examples-gaussian-process-and-regression">
+<h1><strong>Lecture 11 Examples – Gaussian process and regression</strong><a class="headerlink" href="#lecture-11-examples-gaussian-process-and-regression" title="Permalink to this heading">#</a></h1>
 <p>Here is the copied and modified example from <a class="reference external" href="https://peterroelants.github.io/posts/gaussian-process-tutorial/">https://peterroelants.github.io/posts/gaussian-process-tutorial/</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -568,7 +561,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/859458a59a82a64efd4639c1ea9c8dc7fcc757440ae47f28e5d74800996dc5e2.svg" src="../../../../_images/859458a59a82a64efd4639c1ea9c8dc7fcc757440ae47f28e5d74800996dc5e2.svg" /></div>
+<img alt="../../../../_images/24467daf35ee08327c97f44a565b4a787fcae79215f414981772104a7593e5a4.svg" src="../../../../_images/24467daf35ee08327c97f44a565b4a787fcae79215f414981772104a7593e5a4.svg" /></div>
 </div>
 </section>
 <section id="a-gaussian-process-is-defined-by-a-mean-and-covariance-function">
@@ -641,7 +634,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/df9a233370ef464ef7194dd038cac435483841a5f8d288347a6647f564a1ff3a.svg" src="../../../../_images/df9a233370ef464ef7194dd038cac435483841a5f8d288347a6647f564a1ff3a.svg" /></div>
+<img alt="../../../../_images/9c60b19423952b28f264cf1cde06dce12311df696adf2a4d3fc7cac142466a68.svg" src="../../../../_images/9c60b19423952b28f264cf1cde06dce12311df696adf2a4d3fc7cac142466a68.svg" /></div>
 </div>
 </section>
 <section id="random-generating-the-samples">
@@ -684,7 +677,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/db67379c08a3b713bf69cc277e511cf0b9e1ea997e1134aa3e19a3fa59a7a430.svg" src="../../../../_images/db67379c08a3b713bf69cc277e511cf0b9e1ea997e1134aa3e19a3fa59a7a430.svg" /></div>
+<img alt="../../../../_images/712e1e360123b92a8b2b5e2346d1a2c81c1b16d29092d842bfaf9626d7012794.svg" src="../../../../_images/712e1e360123b92a8b2b5e2346d1a2c81c1b16d29092d842bfaf9626d7012794.svg" /></div>
 </div>
 </section>
 <section id="advanced-2d-3d-gaussian-fields">
@@ -786,16 +779,15 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/785ad2baf867fb0d054f13cdc555ab878f9223ce9dafe59c43f55385a3f12ce6.svg" src="../../../../_images/785ad2baf867fb0d054f13cdc555ab878f9223ce9dafe59c43f55385a3f12ce6.svg" /></div>
+<img alt="../../../../_images/0b7cbca9e453a0571d0f07986ae512214076ca41f8b68c89c6cb5df861c93e13.svg" src="../../../../_images/0b7cbca9e453a0571d0f07986ae512214076ca41f8b68c89c6cb5df861c93e13.svg" /></div>
 </div>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="part-ii-gaussian-process-for-regression">
-<h1><strong>Part II: Gaussian process for regression</strong><a class="headerlink" href="#part-ii-gaussian-process-for-regression" title="Permalink to this heading">#</a></h1>
+<section id="part-ii-gaussian-process-for-regression">
+<h2><strong>Part II: Gaussian process for regression</strong><a class="headerlink" href="#part-ii-gaussian-process-for-regression" title="Permalink to this heading">#</a></h2>
 <p>Some of them are probably related to the time series analysis for the last part of this course</p>
 <section id="define-gaussian-process-posterior">
-<h2>2.1, Define Gaussian process posterior<a class="headerlink" href="#define-gaussian-process-posterior" title="Permalink to this heading">#</a></h2>
+<h3>2.1, Define Gaussian process posterior<a class="headerlink" href="#define-gaussian-process-posterior" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gaussian process posterior</span>
@@ -823,7 +815,7 @@ document.write(`
 </div>
 </section>
 <section id="compute-the-posterior-mean-and-covariance">
-<h2>2.2, Compute the posterior mean and covariance<a class="headerlink" href="#compute-the-posterior-mean-and-covariance" title="Permalink to this heading">#</a></h2>
+<h3>2.2, Compute the posterior mean and covariance<a class="headerlink" href="#compute-the-posterior-mean-and-covariance" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the true function that we want to regress on</span>
@@ -852,7 +844,7 @@ document.write(`
 </div>
 </section>
 <section id="plot-the-postior-distribution-and-some-samples">
-<h2>2.3, plot the postior distribution and some samples<a class="headerlink" href="#plot-the-postior-distribution-and-some-samples" title="Permalink to this heading">#</a></h2>
+<h3>2.3, plot the postior distribution and some samples<a class="headerlink" href="#plot-the-postior-distribution-and-some-samples" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
@@ -881,14 +873,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/3aabbd7b101f47707977fd68f30438a9163192e4408b18ff57f2e3ec321d3ed4.svg" src="../../../../_images/3aabbd7b101f47707977fd68f30438a9163192e4408b18ff57f2e3ec321d3ed4.svg" /></div>
+<img alt="../../../../_images/e8f78c70f1ccebcc97e2e57f11d2fd8b4fe9625fd7c007d66fa741a025fa2c6e.svg" src="../../../../_images/e8f78c70f1ccebcc97e2e57f11d2fd8b4fe9625fd7c007d66fa741a025fa2c6e.svg" /></div>
 </div>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="part-iii-gaussian-process-for-regression-noisy-observations">
-<h1>Part III: Gaussian process for regression - Noisy observations<a class="headerlink" href="#part-iii-gaussian-process-for-regression-noisy-observations" title="Permalink to this heading">#</a></h1>
+<section id="part-iii-gaussian-process-for-regression-noisy-observations">
+<h2>Part III: Gaussian process for regression - Noisy observations<a class="headerlink" href="#part-iii-gaussian-process-for-regression-noisy-observations" title="Permalink to this heading">#</a></h2>
 <section id="gaussian-process-posterior-with-noisy-obeservations">
-<h2>3.1, Gaussian process posterior with noisy obeservations<a class="headerlink" href="#gaussian-process-posterior-with-noisy-obeservations" title="Permalink to this heading">#</a></h2>
+<h3>3.1, Gaussian process posterior with noisy obeservations<a class="headerlink" href="#gaussian-process-posterior-with-noisy-obeservations" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gaussian process posterior with noisy obeservations</span>
@@ -916,7 +908,7 @@ document.write(`
 </div>
 </section>
 <section id="id1">
-<h2>3.2, Plot the postior distribution and some samples<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h3>3.2, Plot the postior distribution and some samples<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
@@ -945,8 +937,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/53adc62d7530af11c86713eeeef289c201a09e614f0c458d2f4c8ac73bfbee9b.svg" src="../../../../_images/53adc62d7530af11c86713eeeef289c201a09e614f0c458d2f4c8ac73bfbee9b.svg" /></div>
+<img alt="../../../../_images/32984de66ae08a0eb9c1c1561f856122b580b67134d415c6b47509c9333303cf.svg" src="../../../../_images/32984de66ae08a0eb9c1c1561f856122b580b67134d415c6b47509c9333303cf.svg" /></div>
 </div>
+</section>
 </section>
 </section>
 
@@ -995,7 +988,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Lecture 11: Excercises for Gaussian process</strong></p>
+        <p class="prev-next-title"><strong>Lecture 11 Excercises – Gaussian process and transformation</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1017,7 +1010,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lecture 11: Examples for Gaussian process</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#five-different-paths-of-brownian-motions-random">Five different paths of Brownian motions (random)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-gaussian-process-is-defined-by-a-mean-and-covariance-function">A Gaussian process is defined by a mean and covariance function</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-exponentiated-quadratic">1, Define the exponentiated quadratic</a></li>
@@ -1027,21 +1019,18 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-2d-3d-gaussian-fields">5, Advanced 2D/3D Gaussian fields</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-gaussian-process-for-regression"><strong>Part II: Gaussian process for regression</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-gaussian-process-posterior">2.1, Define Gaussian process posterior</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-the-posterior-mean-and-covariance">2.2, Compute the posterior mean and covariance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-postior-distribution-and-some-samples">2.3, plot the postior distribution and some samples</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-gaussian-process-for-regression"><strong>Part II: Gaussian process for regression</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-gaussian-process-posterior">2.1, Define Gaussian process posterior</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-the-posterior-mean-and-covariance">2.2, Compute the posterior mean and covariance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-postior-distribution-and-some-samples">2.3, plot the postior distribution and some samples</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-iii-gaussian-process-for-regression-noisy-observations">Part III: Gaussian process for regression - Noisy observations</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-process-posterior-with-noisy-obeservations">3.1, Gaussian process posterior with noisy obeservations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.2, Plot the postior distribution and some samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-iii-gaussian-process-for-regression-noisy-observations">Part III: Gaussian process for regression - Noisy observations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-process-posterior-with-noisy-obeservations">3.1, Gaussian process posterior with noisy obeservations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.2, Plot the postior distribution and some samples</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
