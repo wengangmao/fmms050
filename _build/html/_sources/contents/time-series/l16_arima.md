@@ -24,4 +24,4 @@ name: lecture16
 ---
 ```
 
-**Please download the lecture through the following link [Lecture 16 -- A few examples of using ARIMA](https://github.com/wengangmao/fmms050/blob/main/contents/regression/lectures/Lecture%204%20-%20Model%20parameter%20estimation%20-%20gradient.pdf)**
+**Please download the lecture through the following link [Lecture 16 -- A few examples of using ARIMA](https://github.com/wengangmao/fmms050/blob/main/contents/time-series/lectures/Lecture%2016%20-%20A%20few%20examples%20for%20ARIMA.pdf)**

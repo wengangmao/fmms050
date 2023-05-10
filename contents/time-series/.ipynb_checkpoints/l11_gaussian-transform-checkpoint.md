@@ -8,12 +8,12 @@
 * Why transferring to Gaussian
 * How to check Gaussian distribution
 * Gaussian transformation methods 
->- Needs for data transfer 
->- Log Transformation
->- Square root Transformation
->- Reciprocal Transformation
->- Exponential Transformation
->- Box-Cox Transformation
+   >- Needs for data transfer 
+   >- Log Transformation
+   >- Square root Transformation
+   >- Reciprocal Transformation
+   >- Exponential Transformation
+   >- Box-Cox Transformation
 * Some examples
 
 
@@ -26,4 +26,4 @@ name: lecture11
 ---
 ```
 
-**Please download the lecture through the following link [Lecture 11 -- Gaussian transformation methods](https://github.com/wengangmao/fmms050/blob/main/contents/regression/lectures/Lecture%204%20-%20Model%20parameter%20estimation%20-%20gradient.pdf)**
+**Please download the lecture through the following link [Lecture 11 -- Gaussian transformation methods](https://github.com/wengangmao/fmms050/blob/main/contents/time-series/lectures/Lecture%2011%20-%20Transformation%20and%20Gaussian.pdf)**
