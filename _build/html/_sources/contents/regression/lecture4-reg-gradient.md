@@ -8,8 +8,8 @@
 * Basic meaning of the model regression
 * Define the regression (model optimization) problem
 * Estimation of the regression model (parameters) 
->- Euler-Lagrange theorem (mathematically explicit solution) 
->- Gradient descent algorithm (numerical approximation)
+- Euler-Lagrange theorem (mathematically explicit solution) 
+- Gradient descent algorithm (numerical approximation)
 * Numerical method: the gradient descent algorithms
 * Computer examples
 
