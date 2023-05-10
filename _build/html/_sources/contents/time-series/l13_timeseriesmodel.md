@@ -11,12 +11,40 @@
 * Smooth data (Moving Average) models
 
 
-
-
 ```{figure} ./lectures/lecture13.png
 ---
-height: 800px
+height: 1600px
 name: lecture13
+---
+```
+```{figure} ./lectures/lecture13-1.png
+---
+height: 1600px
+name: lecture13-1
+---
+```
+```{figure} ./lectures/lecture13-2.png
+---
+height: 1600px
+name: lecture13-2
+---
+```
+```{figure} ./lectures/lecture13-3.png
+---
+height: 1600px
+name: lecture13-3
+---
+```
+```{figure} ./lectures/lecture13-4.png
+---
+height: 1600px
+name: lecture13-4
+---
+```
+```{figure} ./lectures/lecture13-5.png
+---
+height: 800px
+name: lecture13-5
 ---
 ```
 

@@ -19,8 +19,56 @@
 
 ```{figure} ./lectures/lecture16.png
 ---
-height: 800px
+height: 1600px
 name: lecture16
+---
+```
+```{figure} ./lectures/lecture16-1.png
+---
+height: 1600px
+name: lecture16-1
+---
+```
+```{figure} ./lectures/lecture16-2.png
+---
+height: 1600px
+name: lecture16-2
+---
+```
+```{figure} ./lectures/lecture16-3.png
+---
+height: 1600px
+name: lecture16-3
+---
+```
+```{figure} ./lectures/lecture16-4.png
+---
+height: 1600px
+name: lecture16-4
+---
+```
+```{figure} ./lectures/lecture16-5.png
+---
+height: 1600px
+name: lecture16-5
+---
+```
+```{figure} ./lectures/lecture14-6.png
+---
+height: 1600px
+name: lecture16-6
+---
+```
+```{figure} ./lectures/lecture14-7.png
+---
+height: 1600px
+name: lecture16-7
+---
+```
+```{figure} ./lectures/lecture14-8.png
+---
+height: 1600px
+name: lecture14-8
 ---
 ```
 
