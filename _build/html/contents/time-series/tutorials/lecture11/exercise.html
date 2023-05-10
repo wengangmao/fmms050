@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 11: Excercises for Gaussian process &#8212; ML for engineering mechanics</title>
+    <title>Lecture 11 Excercises – Gaussian process and transformation &#8212; ML for engineering mechanics</title>
   
   
   
@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Lecture 12 – Basic properties of stationary Gaussian process" href="../../l12_stationary-gaussian.html" />
-    <link rel="prev" title="Lecture 11: Examples for Gaussian process" href="examples.html" />
+    <link rel="prev" title="Lecture 11 Examples – Gaussian process and regression" href="examples.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -210,11 +210,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">PART 4 -- TIME SERIES LEARNING METHODS</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../l11_gaussian-transform.html">Lecture 11 -- Gaussian transformation methods</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="examples.html"><strong>Lecture 11: Examples for Gaussian process</strong></a></li>
-
-
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Lecture 11: Excercises for Gaussian process</strong></a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Computer Examples</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Computer Excercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../l12_stationary-gaussian.html">Lecture 12 -- Basic properties of stationary Gaussian process</a></li>
@@ -461,7 +458,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 11: Excercises for Gaussian process</h1>
+    <h1>Lecture 11 Excercises – Gaussian process and transformation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -471,15 +468,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lecture 11: Excercises for Gaussian process</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-processes-regression-basic-introductory-example">Gaussian Processes regression: basic introductory example</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-processes-regression-basic-introductory-example">Gaussian Processes regression: basic introductory example</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-generation">Dataset generation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-noise-free-target">Example with noise-free target</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-noisy-targets">Example with noisy targets</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -490,16 +483,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-11-excercises-for-gaussian-process">
-<h1><strong>Lecture 11: Excercises for Gaussian process</strong><a class="headerlink" href="#lecture-11-excercises-for-gaussian-process" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-11-excercises-gaussian-process-and-transformation">
+<h1><strong>Lecture 11 Excercises – Gaussian process and transformation</strong><a class="headerlink" href="#lecture-11-excercises-gaussian-process-and-transformation" title="Permalink to this heading">#</a></h1>
 <p>This is a directly coped code from scikit website. Your tasks are as follows:</p>
 <ul class="simple">
 <li><p>Understand the code and run through it</p></li>
 <li><p>Write a short summary about the results</p></li>
 </ul>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="gaussian-processes-regression-basic-introductory-example">
-<h1>Gaussian Processes regression: basic introductory example<a class="headerlink" href="#gaussian-processes-regression-basic-introductory-example" title="Permalink to this heading">#</a></h1>
+<section id="gaussian-processes-regression-basic-introductory-example">
+<h2>Gaussian Processes regression: basic introductory example<a class="headerlink" href="#gaussian-processes-regression-basic-introductory-example" title="Permalink to this heading">#</a></h2>
 <p>A simple one-dimensional regression example computed in two different ways:</p>
 <ol class="arabic simple">
 <li><p>A noise-free case</p></li>
@@ -523,6 +515,7 @@ regularization on the assumed training points’ covariance matrix.</p>
 </div>
 </div>
 </div>
+</section>
 <section id="dataset-generation">
 <h2>Dataset generation<a class="headerlink" href="#dataset-generation" title="Permalink to this heading">#</a></h2>
 <p>We will start by generating a synthetic dataset. The true generative process
@@ -550,7 +543,7 @@ is defined as <span class="math notranslate nohighlight">\(f(x) = x \sin(x)\)</s
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/3d737e0457c630995078588650d4fdd45624301cd6c0c1c4149ff973b880a88e.png" src="../../../../_images/3d737e0457c630995078588650d4fdd45624301cd6c0c1c4149ff973b880a88e.png" />
+<img alt="../../../../_images/739161fd17c7d4a18f8d5cb0756b449bf22d389de774ed40c8c5b8c13a36c28a.png" src="../../../../_images/739161fd17c7d4a18f8d5cb0756b449bf22d389de774ed40c8c5b8c13a36c28a.png" />
 </div>
 </div>
 <p>We will use this dataset in the next experiment to illustrate how Gaussian
@@ -729,7 +722,7 @@ variable.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><strong>Lecture 11: Examples for Gaussian process</strong></p>
+        <p class="prev-next-title"><strong>Lecture 11 Examples – Gaussian process and regression</strong></p>
       </div>
     </a>
     <a class="right-next"
@@ -759,15 +752,11 @@ variable.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lecture 11: Excercises for Gaussian process</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-processes-regression-basic-introductory-example">Gaussian Processes regression: basic introductory example</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-processes-regression-basic-introductory-example">Gaussian Processes regression: basic introductory example</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-generation">Dataset generation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-noise-free-target">Example with noise-free target</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-noisy-targets">Example with noisy targets</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>

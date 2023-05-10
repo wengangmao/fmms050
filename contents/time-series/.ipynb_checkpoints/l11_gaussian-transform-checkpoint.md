@@ -21,7 +21,7 @@
 
 ```{figure} ./lectures/lecture11.png
 ---
-height: 800px
+height: 1600px
 name: lecture11
 ---
 ```
