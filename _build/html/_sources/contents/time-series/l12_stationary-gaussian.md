@@ -21,8 +21,38 @@
 
 ```{figure} ./lectures/lecture12.png
 ---
-height: 800px
+height: 1600px
 name: lecture12
+---
+```
+```{figure} ./lectures/lecture12-1.png
+---
+height: 1600px
+name: lecture12-1
+---
+```
+```{figure} ./lectures/lecture12-2.png
+---
+height: 1600px
+name: lecture12-2
+---
+```
+```{figure} ./lectures/lecture12-3.png
+---
+height: 1600px
+name: lecture12-3
+---
+```
+```{figure} ./lectures/lecture12-4.png
+---
+height: 1600px
+name: lecture12-4
+---
+```
+```{figure} ./lectures/lecture12-5.png
+---
+height: 1600px
+name: lecture12-5
 ---
 ```
 
