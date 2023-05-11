@@ -4,7 +4,13 @@
 
 <center><span style = "color: red; font-weight: 500;  font-size: 30px">Chalmers FMMS050 Project 1: Linear regression for roll damping </span></center>  <br />
 
-The first project assignment is to use the basic regression method to estimate the coefficients for roll damping models. You need to understand and explain the meanings of the regression methods.
+The first project assignment is to use the basic regression method to estimate the coefficients for roll damping models. You need to understand and explain the meanings of the regression methods. The report should be composed of at least the following components:
+* Background of the project 
+* Methods used in the project
+* Results of different methods
+* Discussion/Comparison of different methods
+* Conclusions
+
 
 
 ```{figure} ./project1.png

@@ -1,4 +1,4 @@
-# Project 2: Machine learning models for performance modelling
+# Project 1: Machine learning models for performance modelling
 +++
 ---
 
