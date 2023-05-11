@@ -4,126 +4,135 @@ root: contents/introduction
 parts:
 - caption: PART 1 -- MACHINE LEARNING FOR ENGINEERING APPLICATIONS
   chapters:
-  - file:  contents/ml-engineering/ml-types.md
+  - file:  contents/P1_ml-engineering/ml-types.md
     title: Types of machine learning methods
-  - file:  contents/ml-engineering/basic-math.md
+  - file:  contents/P1_ml-engineering/basic-math.md
     title: Basic mathematics for machine learning
-  - file:  contents/ml-engineering/intro_applications.md
+  - file:  contents/P1_ml-engineering/intro_applications.md
     title: Lecture 1 -- AI/ML terminologies
-
-#- caption: DATA FILTERING METHODS
-#  chapters:
-#  - file: contents/data-filter/fft.md
-#    title: Fast Fourier Transform
-#  - file: contents/data-filter/moving-average.md
-#    title: Moving Average Methods
-#  - file: contents/data-filter/kalmar.md
-#    title: Kalmar filtering
-#    sections:
-#     - file: contents/data-filter/kalmar_tutorial.md
-#       title: Tutorial of Kalmar filter methods    
-#     - file: contents/data-filter/kalmar_codes.md
-#       title: Example codes for Kalmar filter methods
 
 - caption: PART 2 -- STATISTICAL REGRESSION
   chapters:
-  - file: contents/regression/lecture2-interperations.md
+  - file: contents/P2_regression/lecture2-interperations.md
     title: Lecture 2 -- Regression and interpretation
     sections:
-    - file: contents/regression/tutorials/lecture2/examples.ipynb
+    - file: contents/P2_regression/tutorials/lecture2/examples.ipynb
       title: Computer Examples
-    - file: contents/regression/tutorials/lecture2/excercise.ipynb
+    - file: contents/P2_regression/tutorials/lecture2/excercise.ipynb
       title: Computer Excercises      
-  - file: contents/regression/lecture3-poly-spline.md
+  - file: contents/P2_regression/lecture3-poly-spline.md
     title: Lecture 3 -- Polynominal and spline fitting   
     sections:
-    - file: contents/regression/tutorials/lecture3/examples.ipynb
+    - file: contents/P2_regression/tutorials/lecture3/examples.ipynb
       title: Computer Examples
-    - file: contents/regression/tutorials/lecture3/excercise.ipynb
+    - file: contents/P2_regression/tutorials/lecture3/excercise.ipynb
       title: Computer Excercises
-  - file: contents/regression/lecture4-reg-gradient.md
+  - file: contents/P2_regression/lecture4-reg-gradient.md
     title: Lecture 4 -- Model parameter estimation by gradient  
     sections:
-    - file: contents/regression/tutorials/lecture4/examples.ipynb
+    - file: contents/P2_regression/tutorials/lecture4/examples.ipynb
       title: Computer Examples
-    - file: contents/regression/tutorials/lecture4/excercise.ipynb
+    - file: contents/P2_regression/tutorials/lecture4/excercise.ipynb
       title: Computer Excercises
-  - file: contents/regression/lecture5-gam-mem.md
+  - file: contents/P2_regression/lecture5-gam-mem.md
     title: Lecture 5 -- GLM GAM and Mixed-effects model
     sections:
-    - file: contents/regression/tutorials/lecture5/examples.ipynb
+    - file: contents/P2_regression/tutorials/lecture5/examples.ipynb
       title: Computer Examples
-    - file: contents/regression/tutorials/lecture5/excercise.ipynb
+    - file: contents/P2_regression/tutorials/lecture5/excercise.ipynb
       title: Computer Excercises
       
       
 - caption: PART 3 -- MACHINE LEARNING METHODS
   chapters:
-  - file: contents/machine-learning/l06_logistic.md
+  - file: contents/P3_machine-learning/l06_logistic.md
     title: Lecture 6 -- Logistical regression and classification
     sections:
-    - file: contents/machine-learning/tutorials/lecture6/examples.ipynb
+    - file: contents/P3_machine-learning/tutorials/lecture6/examples.ipynb
       title: Computer Examples
-    - file: contents/machine-learning/tutorials/lecture6/exercise.ipynb
+    - file: contents/P3_machine-learning/tutorials/lecture6/exercise.ipynb
       title: Computer Excercises
-  - file: contents/machine-learning/l07_trees.md
+  - file: contents/P3_machine-learning/l07_trees.md
     title: Lecture 7 -- Decision trees and ensemble algorithm
     sections:
-    - file: contents/machine-learning/tutorials/lecture7/examples.ipynb
+    - file: contents/P3_machine-learning/tutorials/lecture7/examples.ipynb
       title: Computer Examples
-    - file: contents/machine-learning/tutorials/lecture7/exercise.ipynb
+    - file: contents/P3_machine-learning/tutorials/lecture7/exercise.ipynb
       title: Computer Excercises
-  - file: contents/machine-learning/l08_boost.md
+  - file: contents/P3_machine-learning/l08_boost.md
     title: Lecture 8 -- Boosting methods (XGBoost)
     sections:
-    - file: contents/machine-learning/tutorials/lecture8/examples.ipynb
+    - file: contents/P3_machine-learning/tutorials/lecture8/examples.ipynb
       title: Computer Examples
-    - file: contents/machine-learning/tutorials/lecture8/exercise.ipynb
+    - file: contents/P3_machine-learning/tutorials/lecture8/exercise.ipynb
       title: Computer Excercises
-  - file: contents/machine-learning/l09_svm.md
+  - file: contents/P3_machine-learning/l09_svm.md
     title: Lecture 9 -- Support vector machine
-  - file: contents/machine-learning/l10_ann.md
+  - file: contents/P3_machine-learning/l10_ann.md
     title: Lecture 10 -- Artificial neural network
 
 
     
 - caption: PART 4 -- TIME SERIES LEARNING METHODS
   chapters:
-  - file: contents/time-series/l11_gaussian-transform.md
+  - file: contents/P4_time-series/l11_gaussian-transform.md
     title: Lecture 11 -- Gaussian transformation methods
     sections:
-    - file: contents/time-series/tutorials/lecture11/examples.ipynb
+    - file: contents/P4_time-series/tutorials/lecture11/examples.ipynb
       title: Computer Examples
-    - file: contents/time-series/tutorials/lecture11/exercise.ipynb
+    - file: contents/P4_time-series/tutorials/lecture11/exercise.ipynb
       title: Computer Excercises    
-  - file: contents/time-series/l12_stationary-gaussian.md
+  - file: contents/P4_time-series/l12_stationary-gaussian.md
     title:  Lecture 12 -- Basic properties of stationary Gaussian process
-  - file: contents/time-series/l13_timeseriesmodel.md
+  - file: contents/P4_time-series/l13_timeseriesmodel.md
     title:  Lecture 13 -- Time series analysis and model exploration
-  - file: contents/time-series/l14_ar-ma1.md
+  - file: contents/P4_time-series/l14_ar-ma1.md
     title:  Lecture 14 -- Auto regressive models and Moving average models (1)
     sections:
-    - file: contents/time-series/tutorials/lecture14/examples.ipynb
+    - file: contents/P4_time-series/tutorials/lecture14/examples.ipynb
       title: Computer Examples     
-  - file: contents/time-series/l15_ar-ma2.md
+  - file: contents/P4_time-series/l15_ar-ma2.md
     title:  Lecture 15 -- Auto regressive models and Moving average models (2)
-  - file: contents/time-series/l16_arima.md
+  - file: contents/P4_time-series/l16_arima.md
     title:  Lecture 16 -- ARIMA models
     
 - caption: PROJECT ASSIGNMENT
   chapters:
-  - file: contents/assignment/project1.md
+  - file: contents/PA_assignment/project1.md
     title: Project 1 -- Simple regression for roll damping
+  - file: contents/PA_assignment/project2.md
+    title: Project 2 -- Machine learning models for performance modelling
+  - file: contents/PA_assignment/project3.md
+    title: Project 3 -- ARIMA model for ice thickness prediction
+  - file: contents/PA_assignment/project3.md
+    title: Students self defined projects
 
-#- caption: DEEP LEARNING AND SPATIO-TEMPORAL MODELLING
-#  chapters:
-#  - file: contents/deep-learning/cnn.md
-#    title: Convolutional neural network
-#  - file: contents/deep-learning/rnn.md
-#    title: Recursive neural networks - LSTM
-#  - file: contents/deep-learning/spatio-temporal.md
-#    title: Spatio-temporal modelling
-#  - file: contents/deep-learning/spde.md
-#    title: Statistical paritical differential equations
+
+- caption: Upcoming Part 5 & 6
+
+- caption: PART 5 -- DATA FILTERING METHODS
+  chapters:
+  - file: contents/P5_data-filter/fft.md
+    title: Lecture 17 -- Fast Fourier Transform
+  - file: contents/P5_data-filter/moving-average.md
+    title: Lecture 18 -- Moving Average Methods
+  - file: contents/P5_data-filter/kalmar.md
+    title: Lecture 19 -- Kalmar filtering
+    sections:
+     - file: contents/P5_data-filter/kalmar_tutorial.md
+       title: Tutorial of Kalmar filter methods    
+     - file: contents/P5_data-filter/kalmar_codes.md
+       title: Example codes for Kalmar filter methods
+
+- caption: PART 6 -- DEEP LEARNING AND SPATIO-TEMPORAL MODELLING
+  chapters:
+  - file: contents/P6_deep-learning/cnn.md
+    title: Lecture 20 -- Convolutional neural network
+  - file: contents/P6_deep-learning/rnn.md
+    title: Lecture 21 -- Recursive neural networks - LSTM
+  - file: contents/P6_deep-learning/spatio-temporal.md
+    title: Lecture 22 -- Spatio-temporal modelling
+  - file: contents/P6_deep-learning/spde.md
+    title: Lecture 23 -- Statistical paritical differential equations
 
 
