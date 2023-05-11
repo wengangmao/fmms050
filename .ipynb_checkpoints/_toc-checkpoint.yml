@@ -104,13 +104,10 @@ parts:
     title: Project 2 -- Machine learning models for performance modelling
   - file: contents/PA_assignment/project3.md
     title: Project 3 -- ARIMA model for ice thickness prediction
-  - file: contents/PA_assignment/project3.md
+  - file: contents/PA_assignment/projects.md
     title: Students self defined projects
 
-
-- caption: Upcoming Part 5 & 6
-
-- caption: PART 5 -- DATA FILTERING METHODS
+- caption: PART 5 -- DATA FILTERING METHODS (upcoming)
   chapters:
   - file: contents/P5_data-filter/fft.md
     title: Lecture 17 -- Fast Fourier Transform
@@ -124,7 +121,7 @@ parts:
      - file: contents/P5_data-filter/kalmar_codes.md
        title: Example codes for Kalmar filter methods
 
-- caption: PART 6 -- DEEP LEARNING AND SPATIO-TEMPORAL MODELLING
+- caption: PART 6 -- DEEP LEARNING AND SPATIO-TEMPORAL MODELLING (upcoming)
   chapters:
   - file: contents/P6_deep-learning/cnn.md
     title: Lecture 20 -- Convolutional neural network
