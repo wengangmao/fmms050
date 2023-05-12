@@ -9,8 +9,50 @@ In this section, we will describe some basic terminologies of machine learning m
 
 ```{figure} ./lectures/lecture1.png
 ---
-height: 800px
+height: 1600px
 name: lecture1
+---
+```
+```{figure} ./lectures/lecture1-1.png
+---
+height: 1600px
+name: lecture1-1
+---
+```
+```{figure} ./lectures/lecture1-2.png
+---
+height: 1600px
+name: lecture1-2
+---
+```
+```{figure} ./lectures/lecture1-3.png
+---
+height: 1600px
+name: lecture1-3
+---
+```
+```{figure} ./lectures/lecture1-4.png
+---
+height: 1600px
+name: lecture1-4
+---
+```
+```{figure} ./lectures/lecture1-5.png
+---
+height: 1600px
+name: lecture1-5
+---
+```
+```{figure} ./lectures/lecture1-6.png
+---
+height: 1600px
+name: lecture1-6
+---
+```
+```{figure} ./lectures/lecture1-7.png
+---
+height: 1600px
+name: lecture1-7
 ---
 ```
 
