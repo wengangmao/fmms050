@@ -21,9 +21,59 @@
 
 ```{figure} ./lectures/lecture6.png
 ---
-height: 800px
+height: 1600px
 name: lecture6
 ---
 ```
+```{figure} ./lectures/lecture6-1.png
+---
+height: 1600px
+name: lecture6-1
+---
+```
+```{figure} ./lectures/lecture6-2.png
+---
+height: 1600px
+name: lecture6-2
+---
+```
+```{figure} ./lectures/lecture6-3.png
+---
+height: 1600px
+name: lecture6-3
+---
+```
+```{figure} ./lectures/lecture6-4.png
+---
+height: 1600px
+name: lecture6-4
+---
+```
+```{figure} ./lectures/lecture6-5.png
+---
+height: 1600px
+name: lecture6-5
+---
+```
+```{figure} ./lectures/lecture6-6.png
+---
+height: 1600px
+name: lecture6-6
+---
+```
+```{figure} ./lectures/lecture6-7.png
+---
+height: 1600px
+name: lecture6-7
+---
+```
+```{figure} ./lectures/lecture6-8.png
+---
+height: 1600px
+name: lecture6-8
+---
+```
+
+
 
 **Please download the lecture through the following link [Lecture 6 -- Logistical regression and classification](https://github.com/wengangmao/fmms050/blob/main/contents/machine-learning/lectures/Lecture%206%20-%20Logistical%20regression%20classification.pdf)**

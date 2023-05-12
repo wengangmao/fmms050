@@ -24,9 +24,23 @@
 
 ```{figure} ./lectures/lecture8.png
 ---
-height: 800px
+height: 1600px
 name: lecture8
 ---
 ```
+```{figure} ./lectures/lecture8-1.png
+---
+height: 1600px
+name: lecture8-1
+---
+```
+```{figure} ./lectures/lecture8-2.png
+---
+height: 1600px
+name: lecture8-2
+---
+```
+
+
 
 **Please download the lecture through the following link [Lecture 8 -- Boosting method (XGBoost)](https://github.com/wengangmao/fmms050/blob/main/contents/machine-learning/lectures/Lecture%208%20-%20ML2%20Trains_XGboost_examples.pdf)**

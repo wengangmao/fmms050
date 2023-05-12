@@ -25,5 +25,17 @@ height: 1600px
 name: lecture11
 ---
 ```
+```{figure} ./lectures/lecture11-1.png
+---
+height: 1600px
+name: lecture11-1
+---
+```
+```{figure} ./lectures/lecture11-2.png
+---
+height: 1600px
+name: lecture11-2
+---
+```
 
 **Please download the lecture through the following link [Lecture 11 -- Gaussian transformation methods](https://github.com/wengangmao/fmms050/blob/main/contents/time-series/lectures/Lecture%2011%20-%20Transformation%20and%20Gaussian.pdf)**

@@ -9,9 +9,40 @@ Many of you may have already studied the basics of regression and fitting. In th
 
 ```{figure} ./lectures/lecture2.png
 ---
-height: 800px
+height: 1600px
 name: lecture2
 ---
 ```
+```{figure} ./lectures/lecture2-1.png
+---
+height: 1600px
+name: lecture2-1
+---
+```
+```{figure} ./lectures/lecture2-2.png
+---
+height: 1600px
+name: lecture2-2
+---
+```
+```{figure} ./lectures/lecture2-3.png
+---
+height: 1600px
+name: lecture2-3
+---
+```
+```{figure} ./lectures/lecture2-4.png
+---
+height: 1600px
+name: lecture2-4
+---
+```
+```{figure} ./lectures/lecture2-5.png
+---
+height: 1600px
+name: lecture2-5
+---
+```
+
 
 **Please download the lecture through the following link [Lecture 2: Regression and statistical interpretation](https://github.com/wengangmao/fmms050/blob/main/contents/regression/lectures/Lecture%202%20-%20Regression%20and%20interperation.pdf)**
